@@ -1,0 +1,32 @@
+@mixin linearGradient($deg, $buttomleft, $topright){
+    background: $buttomleft; /* Old browsers */
+    background: -moz-linear-gradient($deg,  $buttomleft 0%, $topright 85%); /* FF3.6+ */
+    background: -webkit-gradient(linear, $deg, color-stop(0%,$buttomleft), color-stop(85%,$topright)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient($deg,  $buttomleft 0%,$topright 85%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient($deg,  $buttomleft 0%,$topright 85%); /* Opera 11.10+ */
+    background: -ms-linear-gradient($deg,  $buttomleft 0%,$topright 85%); /* IE10+ */
+    background: linear-gradient($deg,  $buttomleft 0%,$topright 85%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, $white,  10%)) {
+  // For Google Chrome
+  ::-webkit-scrollbar {
+      width:  $size;
+      height: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: linear-gradient(150deg, $foreground-color, darken($foreground-color, 20%));
+  }
+
+  ::-webkit-scrollbar-track {
+      background: $background-color; 
+  }
+
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}

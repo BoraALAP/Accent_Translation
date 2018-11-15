@@ -1,0 +1,276 @@
+*{
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    box-sizing:border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    margin:0;
+    padding:0;
+    width: 100vw;
+    overflow-x: hidden;
+    font:{
+        family:$font1;
+    } 
+    
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin:0px;
+    padding:0px;
+}
+
+h1{
+    font:{
+        family: $font1;
+        size: 1.6em;
+        weight:$black;
+    }
+    color:$brand1;
+    text-transform: uppercase;
+}
+
+h2{
+    font:{
+        family: $font1;
+        size: 1.8em;
+        weight:$black;
+    }
+    color:$gray5;
+    text-transform: uppercase;
+}
+
+h3{ 
+    font:{
+        family: $font1;
+        size: 1.5em;
+        weight:$black;
+    }
+    color:$gray4;
+}
+
+h4{
+    font:{
+        family: $font2;
+        size: 0.75em;
+        weight:500;
+    }
+    color:$brand1;
+}
+ 
+h5{
+    font:{
+        family: $font1;
+        size: 1.2em;
+        weight:$bold;
+    }
+    
+    color:$brand1;
+}
+
+h6{
+    font:{
+        family: $font2;
+        size: 1em;
+        weight:$semibold;
+    }
+    color:$gray4;
+}
+
+p{ 
+    font:{
+        family: $font2;
+        size: 0.65em;
+        weight:$regular;
+    }
+    margin:0;
+    color: $gray1; 
+}
+
+a, button{
+    text-decoration:none;
+    font:{
+        size:0.875em;
+        weight: $semibold;
+    }
+    color:$white;
+}
+
+nav{
+    a{
+        font:{
+            family: $font1;
+            size: 0.75em;
+            weight:800;
+        }
+        color: $brand1;
+    }
+}
+
+ul,li{
+    padding:0;
+}
+
+li{
+    margin-bottom: 5px;
+    list-style: none;
+    font:{
+        size:0.75em;
+    }
+}
+
+
+@include MQ($M){
+
+    h1{
+        font:{
+            family: $font1;
+            size: 1.6em;
+            weight:$black;
+        }
+        color:$brand1;
+        text-transform: uppercase;
+    }
+
+    h2{
+        font:{
+            family: $font1;
+            size: 2.25em;
+            weight:$black;
+        }
+        color:$gray5;
+        text-transform: uppercase;
+    }
+
+    h3{ 
+        font:{
+            family: $font1;
+            size: 2em;
+            weight:$black;
+        }
+        color:$gray4;
+    }
+
+    h4{
+        font:{
+            family: $font2;
+            size: 0.875em;
+            weight:500;
+        }
+        color:$brand1;
+    }
+     
+    h5{
+        font:{
+            family: $font1;
+            size: 1.5em;
+            weight:$bold;
+        }
+        
+        color:$brand1;
+    }
+
+    h6{
+        font:{
+            family: $font2;
+            size: 1.2em;
+            weight:$semibold;
+        }
+        color:$gray4;
+    }
+
+    p{ 
+        font:{
+            family: $font2;
+            size: 0.8em;
+            weight:$regular;
+        }
+        margin:0;
+        color: $gray1; 
+    }
+
+    a, button{
+        text-decoration:none;
+        font:{
+            size:1em;
+            weight: $semibold;
+        }
+        color:$white;
+    }
+
+    nav{
+        a{
+            font:{
+                family: $font1;
+                size: 1em;
+                weight:800;
+            }
+            color: $brand1;
+        }
+    }
+
+    ul,li{
+        padding:0;
+    }
+
+    li{
+        margin-bottom: 5px;
+        list-style: none;
+        font:{
+            size:0.875em;
+        }
+    }
+}
+
+section, .section{
+    
+    padding: $gutterh;
+    width: 100vw;
+    box-sizing: border-box;
+    @include MQ($M){
+        padding: $gutterh * 1.5;
+        margin-left:100px;
+        width: calc(100vw - 100px);
+    }
+
+    @include MQ($L){
+        padding: $gutterh * 2;
+    }
+}
+
+.container{
+    display: grid;
+    box-sizing: border-box;
+}
+
+/*******************      Button       ********************/
+button{
+    border:none;
+    border-radius:8px;
+    background:none;
+    outline: none;
+
+}
+
+.btn{
+    box-shadow: $box-shadow;
+    font:{
+        weight: $bold;
+    }
+}
+
+.btnDark{
+    background-color: $brand1;
+    padding: 15px 50px;
+}
+
+.btnSmall{
+    background-color: $white;
+    color: $brand1;
+    padding: 10px 30px;
+}
+

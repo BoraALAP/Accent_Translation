@@ -1,0 +1,15 @@
+/**************************
+MODULES
+***************************/
+
+@import "modules/normalize.scss"; // main structure of the site
+@import "modules/_variables.scss"; // all global variables
+@import "modules/_mediaqueries.scss"; // media queries - if needed 
+@import "modules/_custom.scss"; // media queries - if needed
+@import "modules/_fonts.scss"; // all fonts declaration
+@import "modules/_classes.scss"; // all resuable classes
+@import "modules/_base.scss"; // main structure of the site
+@import "modules/_mixins.scss"; // main structure of the site
+
+@import "sections/_header.scss"; // Site Header
+@import "sections/_footer.scss"; // Site Footer

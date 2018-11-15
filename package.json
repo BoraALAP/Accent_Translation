@@ -1,0 +1,42 @@
+{
+  "name": "Accent_Translation_Main_Website",
+  "version": "1.0.0",
+  "description": "Arttic Fox Website Project Template",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Bora",
+    "ALAP"
+  ],
+  "author": "Bora ALAP",
+  "license": "MIT",
+  "bugs": {
+    "url": " "
+  },
+  "homepage": " ",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.24.4",
+    "gulp": "latest",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-clean-css": "latest",
+    "gulp-coffee": "latest",
+    "gulp-concat": "latest",
+    "gulp-connect": "latest",
+    "gulp-livereload": "^3.8.1",
+    "gulp-refresh": "^1.1.0",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "latest",
+    "gulp-watch-sass": "latest"
+  },
+  "presets": [
+    "env"
+  ]
+}

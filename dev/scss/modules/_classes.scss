@@ -1,0 +1,26 @@
+.number{
+    font:{
+        family: $font2;
+    };
+}
+
+
+svg path{
+	fill: $brand2;
+}
+
+.dropdown-toggle{
+	&::after{
+		content: '';
+		background-image: url('../../assets/svg/down-arrow.svg');
+	    width: 10px;
+	    background-position: center center;
+	    background-size: contain;
+	    height: 10px;
+	    background-repeat: no-repeat;
+	    position: relative;
+	    display: inline-block;
+	    left: 10px;
+	}
+}
+

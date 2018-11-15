@@ -1,0 +1,37 @@
+
+
+//colors
+
+
+$white: #FFFFFF; // White
+$black: #000000; // Black
+
+$gray1: #293234; 
+$gray2: #404E53; 
+$gray3: #C7CACB; 
+$gray4: #4A4A4A;
+$gray5: #2A2A2A;
+
+$brand1: #912329; 
+$brand2: #EB8C30;
+$brand3: #70A9A1;
+$brand4: #CFD7C7;
+$brand5: #F6F1D1;
+
+
+//Font-weights
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+$extrabold: 800;
+$black: 900;
+
+
+//transition styles
+
+$transition-load: cubic-bezier(0.45, 0.1, 0.02, 1.04);
+$box-shadow: 2px 2px 8px rgba($brand2, 0.1), 0px 2px 3px rgba($brand2, 0.1);
+
+$gutterw:5vw;
+$gutterh:5vh;

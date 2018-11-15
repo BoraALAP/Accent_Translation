@@ -1,0 +1,233 @@
+
+/**************************         
+IMPORT
+***************************/     
+@import "_imports.scss"; // media queries - if needed 
+
+
+/**************************
+TEMPLATES begin 
+***************************/   
+/*-----------------------------------------------------------------------------------
+
+        ! ! !    R E A D   T H I S    ! ! !  
+        -----------------
+         
+        It's recomended to use/create a custom css file (or place them at the end of this file) to do you customizations in order to easily update the main css files without loosing your changes
+        
+        
+        > > Please take also a look at the documentation file.       
+    
+
+/*-----------------------------------------------------------------------------------
+    1.  GENERAL ELEMENTS
+    2.  GLOBALS
+     
+-----------------------------------------------------------------------------------*/
+/*---------------------------------------------- 
+1. GENERAL ELEMENTS
+------------------------------------------------*/
+
+html{
+    // @include scrollbars(0.5em, $black);   
+} 
+
+/*---------------------------------------------- 
+2. GLOBALS
+------------------------------------------------*/
+
+#enterence{
+	margin-top: 100px;
+	background: url('../../assets/svg/enterenceBg.svg');
+	background-position: center right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+	.container{
+		text-align: center;
+		align-content: center;
+		grid-gap:$gutterw;
+		padding:($gutterh * 2) 0;
+		h2{
+			margin-bottom:30px;
+		}
+		h6{
+			margin-bottom:25px;
+			font:{
+				weight: $regular;
+			};
+		}
+
+		.text{
+		    align-content: center;
+		    display: grid;
+		    a{
+		    	justify-content: center;
+			    display: grid;
+			    button{
+			    	min-width: 260px;
+			    	display: grid;
+			    	
+			    }
+			}
+		}
+		.image{
+			justify-self: center;
+			display: none;
+			img{
+			    width: 30vw;
+			}
+		}
+		@include MQ($M){
+			grid-template-columns: 3fr 2fr;
+			text-align: left;
+			.text{
+				a{
+					justify-content: start;
+				}
+			}
+			.image{
+				display: grid;
+			}
+		}
+	}
+	@include MQ($M){
+		margin-top: 0px;
+	}
+}
+
+#profs{
+	display: grid;
+	justify-items: center;
+	margin-top:(-$gutterh * 1.5);
+	background: url('../../assets/svg/areYouBg.svg') no-repeat top center;
+	background-size:cover;
+	padding-top:$gutterh * 3;
+	.container{
+		justify-items: center;
+		grid-gap:$gutterh; 
+	}
+	#threeProf{
+		display: grid;
+		grid-gap: $gutterh;
+		margin-bottom: $gutterh;
+		.boxButton{
+			display: grid;
+			align-content:center;
+		    justify-items: center;
+		    text-align: center;
+		    background:$white;
+		    padding:$gutterh;
+		    border-radius: 8px;
+		    box-shadow: $box-shadow;
+			img{
+			    height: 90px;
+			    margin-bottom: 30px;
+			}
+			h5{
+				margin-bottom: 30px;
+			}
+			p{
+				margin-bottom: 15px;
+			}
+			@include MQ($M){
+				padding:$gutterw / 2;
+			}
+		}
+		@include MQ($M){
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: $gutterw/2;
+		}
+	}
+	p{
+		text-align: center;
+	}
+}
+
+#testimonials{
+	.container{
+	    justify-items: center;
+	    h3{
+	    	margin-bottom: 20px;
+	    }
+	    h6{
+	    	color:$brand2;
+	    	margin-bottom:45px;
+	    	text-align: center;
+	    }
+	    .testimonial{
+	    	text-align: center;
+	    	margin-bottom: 30px;
+	    	p{
+	    		margin-bottom: 20px;
+	    	}
+	    	.name{
+	    		font:{
+	    			weight: $extrabold;
+	    		}
+	    		color: $gray4;
+	    	}
+	    }
+	    .testimonialArrows{
+    	    display: grid;
+		    grid-template-columns: repeat(3, 1fr);
+		    justify-self: end;
+		    grid-gap: 10px;
+		    justify-items: center;
+		    align-items: center;
+	    	button{
+	    		padding:10px 15px;
+	    		box-shadow: $box-shadow;
+	    		border-radius:0;
+
+	    	}
+	    }
+	}
+}
+
+#counters{
+	display: grid;
+	justify-items: center;
+	background: url('../../assets/svg/counterBg.svg') no-repeat top center;
+	background-size:cover;
+	padding-top:$gutterh * 5;
+	h3{
+		color:white;
+		text-transform: uppercase;
+		text-align: center;
+		margin-bottom: $gutterh;
+	}
+	#threeCounter{
+		display: grid;
+		grid-gap: $gutterw * 2.5;
+		.counterHome{
+			display: grid;
+			align-content:center;
+		    justify-items: center;
+		    text-align: center;
+		    color:$white;
+			img{
+			    height: 90px;
+			    margin-bottom: 30px;
+			}
+			h6{
+				margin-bottom: 30px;
+				color:$white;
+				font:{
+					size: 1em;
+					weight:$bold;
+				}
+			}
+			.number{
+				font:{
+					size: 3em;
+					weight:$black;
+				}
+			}
+		}
+		@include MQ($M){
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: $gutterw;
+		}
+	}
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="1282px" viewBox="0 0 1440 1282" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="79.0238237%" y1="95.8428009%" x2="15.7077444%" y2="-4.3449346%" id="linearGradient-1">
+            <stop stop-color="#FFFBF7" offset="0%"></stop>
+            <stop stop-color="#FBF7F7" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="AccentTranslations" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="AccentTranslations---Home-2" transform="translate(0.000000, -628.000000)" fill="url(#linearGradient-1)">
+            <g id="Are-you" transform="translate(0.000000, 532.000000)">
+                <path d="M0,158.001006 C82.1458333,199.333669 163.8125,220 245,220 C457.672556,220 689.831468,96.7196472 964.523437,96.7196472 C1101.11719,96.7196472 1259.60938,120.4801 1440,168.001006 L1440,1378 L445.257813,1378 L0,1378 L0,158.001006 Z" id="Rectangle-Copy"></path>
+            </g>
+        </g>
+    </g>
+</svg>

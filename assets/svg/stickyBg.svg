@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="952px" viewBox="0 0 100 952" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>Oval</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="15.3211806%" y1="10.5883856%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FBFBFB" offset="0%"></stop>
+            <stop stop-color="#FBFBFB" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="AccentTranslations" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="AccentTranslations---Home-2" transform="translate(-38.000000, 0.000000)" fill="url(#linearGradient-1)">
+            <g id="Header" transform="translate(0.000000, -84.000000)">
+                <g id="Oval">
+                    <path d="M138,1036.82523 C138,637.39557 138,403.784935 138,335.993323 C138,161.141678 89.2163223,0 60.7874444,0 C32.3585664,0 38.5756503,290.272244 38.5756503,538.718865 C38.5756503,787.165487 138,732.309391 138,1036.82523 Z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

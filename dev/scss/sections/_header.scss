@@ -1,0 +1,151 @@
+header{
+	background-color:$white;
+	
+	width: 100vw;
+	position: fixed;
+	top:0;
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 5vw;
+	#sticky{ 
+		position: relative;
+		justify-content: start;
+		display: grid;
+		grid-auto-rows: auto;
+ 		box-sizing: border-box;
+		#social{
+			display: none;
+			grid-auto-rows: 50px;
+		    align-content: end;
+		}
+
+		img{
+			height:40px;
+			@include MQ($M){
+				height: inherit;
+			}
+		}
+
+		@include MQ($M){
+			width: 100px;
+			height:100vh;
+			padding: 50px 0;
+			background: url('../../assets/svg/stickyBg.svg');
+		    background-position: top center;
+		    background-repeat: no-repeat;
+		    background-size: cover;
+		    position: fixed;
+    		left:0px;
+			top:0px;
+			justify-content: center;
+		    #social{
+		    	display: grid;
+		    }
+		}
+	}
+	nav{
+		position: relative;
+		display: grid;
+		justify-content: end;
+		
+
+		ul{
+			display: grid;
+		    grid-template-columns: repeat(5, auto);
+		    align-items: center;
+	        position: fixed;
+		    left: 0;
+		    top: 100px;
+		    padding: 5vh;
+		    width: 100vw;
+		    grid-template-columns: 1fr;
+		    grid-auto-rows: auto;
+		    background-color: white;
+		    box-shadow: $box-shadow;
+		    margin:0;
+	        box-sizing: border-box;
+		    transform: translateX(100vw);
+		    transition: transform 1s ease;
+		    text-align: center;
+		    li{
+		    	padding: 20px 10px;
+		    	position:relative;
+		    	a{
+		    		font:{
+		    			weight: $semibold;
+		    			size:1em;
+		    		}
+		    		color: $gray2;
+		    	}
+		    }
+
+		    .dropdown-menu{
+		    	display: none;
+		    	
+	    	    
+			    overflow-y: auto;
+			    opacity: 0;
+			    
+	    		.dropdown-item{
+			    	padding: 15px;
+			    	font:{
+		    			weight: $regular;
+		    		}
+			    }
+			    &.active{
+			    	display: grid;
+			    	opacity:1;
+			    }
+			    @include MQ($M){
+			    	position: absolute;
+				    left: 0;
+				    top: 50px;
+				    z-index: 9999;
+				    background-color:$white;
+				    margin-left: -20px;
+				    min-width: 250px;
+
+			    }
+		    }
+		}
+
+		#hamburger{
+			display: grid;
+			position: relative;
+		    z-index: 100;
+		}
+		@include MQ($M){
+			position: absolute;
+			right: $gutterw; 
+			#hamburger{
+				display: none;
+				position: fixed; 
+				right: 5vw;
+			    top: 5vw;
+			}
+			ul{
+				transform: translateX(0px);
+				grid-gap: $gutterw / 2;
+			    grid-template-columns: repeat(5, auto);
+			    width: calc(100vw - 200px);
+			    background-color: inherit;
+			    width: inherit;
+			    padding: inherit;
+			    position: initial;
+			    box-shadow:none;
+			    top: 0;
+			    right: 0;
+			    text-align: left;
+			}
+		}
+	}
+	@include MQ($M) {
+		background-color: inherit;
+		height: inherit;
+		width: inherit;
+		position: absolute;
+		
+	}
+}

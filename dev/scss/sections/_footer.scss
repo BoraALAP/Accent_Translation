@@ -1,0 +1,55 @@
+footer{
+	display: grid;
+	
+    text-align: center;
+	@include linearGradient(45deg, #C44952, #912329);
+	a, h6, small{
+		color:$white;
+	}
+	nav{
+		display: grid;
+		h6{
+			font:{
+				size:1em;
+			}
+			margin-bottom:10px;
+			margin-top: 20px;
+		}
+		li{
+			padding:10px 0px; 
+			a{
+				font:{
+					weight: $regular;
+				}
+			}
+		}
+	}
+
+	#legal{
+		display: grid;
+		.dividerWhite{
+			margin: 30px 0px;
+		}	
+	}
+
+	@include MQ($M){
+		text-align: left;
+		grid-template-columns: 2fr 1fr;
+		margin-left: 100px;
+		nav, #legal{
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		#legal{
+			grid-column: span 2;
+			.dividerWhite{
+				grid-column: span 2;
+			}
+			#copyright, #footerLogo{
+				display: grid;
+			    justify-items: end; 
+			}
+		}
+	}
+
+}
