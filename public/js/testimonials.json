@@ -1,0 +1,34 @@
+{
+	"testimonials" : [
+		{
+			"id": 1,
+			"person": "Shelly Sharma - Green and Spiegel LLP",
+			"testimonial" : "Accent Translations is one of the most efficient and friendly translation services I have come across in my work experience in the Immigration legal industry. Accent translations has provided me with cost friendly, timely efficient and error free services.They are the first company I think off when I need documents translated and I am very satisfied with the customer service I have been receiving.Thank you so much for all your hard work."
+		},
+		{
+			"id": 2,
+			"person": "Lyuba Akimov - Pitblado Law",
+			"testimonial": "The Immigration team at Pitblado Law has had the pleasure of working with Accent Translations on a consistent basis since 2014. We have contracted them for projects in various languages and have always found their team to be very helpful and accommodating. Thank you for the high quality of translations, timely manner of work, and excellent customer care."
+		},
+		{
+			"id": 3,
+			"person": "Andrea Petersen – REKAI LLP ",
+			"testimonial": "I would say that your service is great.  You reply promptly to requests for quotes, translations and related requests.  Very fast turnaround time getting the translations done and fast delivery of the final translation to our office.  We are very happy with Accent Translations.  We would definitely recommend your services."
+		},
+		{
+			"id": 4,
+			"person": "Rupal Rokhit - Desloges Law Group Professional Corporation",
+			"testimonial": "Working in an Immigration law firm requires certified translation of various documents, often on a very short notice. Many thanks to Accent Translations, who is always quick to respond to our requests with accurate and high quality translations."
+		},
+		{
+			"id": 5,
+			"person": "Stefano Pileggi - Make it Canada",
+			"testimonial": "I have been using Accent Translations for my client needs for many years. No matter what language or type of translation is needed, Accent Translations has always been able to provide it.  Their services are prompt and flexible.  I am already recommending Accent Translation to all of my current and future clients."
+		},
+		{
+			"id": 6,
+			"person": "Sujan Ali - Green & Spiegel, LLP",
+			"testimonial": "Accent Translations is quick, efficient, and professional.  Elena is a pleasure to work with and I have never had any problems with obtaining a quote and subsequent translation in the many languages I have requested in.  I recommend Accent Translations for translating  simple to complex documentation in any language."
+		}
+	]
+}

@@ -120,27 +120,29 @@ html{
 		    padding:$gutterh;
 		    border-radius: 8px;
 		    box-shadow: $box-shadow;
+		    min-height: 425px;
 			img{
 			    height: 90px;
 			    margin-bottom: 30px;
 			}
 			h5{
-				margin-bottom: 30px;
+				margin-bottom: 10px;
 			}
 			p{
-				margin-bottom: 15px;
+				margin-bottom: 30px;
 			}
 			@include MQ($M){
-				padding:$gutterw / 2;
+				padding: $gutterw ($gutterw / 2);
 			}
 		}
 		@include MQ($M){
 			grid-template-columns: repeat(2, 1fr);
-			grid-gap: $gutterw/2;
+			grid-gap: $gutterw / 2;
 		}
 	}
 	p{
 		text-align: center;
+		margin: 1em;
 	}
 }
 
@@ -158,6 +160,8 @@ html{
 	    .testimonial{
 	    	text-align: center;
 	    	margin-bottom: 30px;
+    	    min-height: 130px;
+    	    transition: all 1s ease;
 	    	p{
 	    		margin-bottom: 20px;
 	    	}
@@ -166,6 +170,9 @@ html{
 	    			weight: $extrabold;
 	    		}
 	    		color: $gray4;
+	    	}
+	    	&.transition{
+	    		opacity:0;
 	    	}
 	    }
 	    .testimonialArrows{
