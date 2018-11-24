@@ -21,7 +21,8 @@ TEMPLATES begin
 
 /*-----------------------------------------------------------------------------------
     1.  GENERAL ELEMENTS
-    2.  GLOBALS
+    2.  HOMEPAGE
+    2.  CONTACT PAGE
      
 -----------------------------------------------------------------------------------*/
 /*---------------------------------------------- 
@@ -33,7 +34,7 @@ html{
 } 
 
 /*---------------------------------------------- 
-2. GLOBALS
+2. HOME PAGE
 ------------------------------------------------*/
 
 #enterence{
@@ -49,10 +50,10 @@ html{
 		grid-gap:$gutterw;
 		padding:($gutterh * 2) 0;
 		h2{
-			margin-bottom:30px;
+			margin-bottom:32px;
 		}
 		h6{
-			margin-bottom:25px;
+			margin-bottom:24px;
 			font:{
 				weight: $regular;
 			};
@@ -65,7 +66,7 @@ html{
 		    	justify-content: center;
 			    display: grid;
 			    button{
-			    	min-width: 260px;
+			    	min-width: 256px;
 			    	display: grid;
 			    	
 			    }
@@ -119,17 +120,18 @@ html{
 		    background:$white;
 		    padding:$gutterh;
 		    border-radius: 8px;
-		    box-shadow: $box-shadow;
-		    min-height: 425px;
+		   	
+		    min-height: 424px;
+		    @extend .btn;
 			img{
-			    height: 90px;
-			    margin-bottom: 30px;
+			    height: 96px;
+			    margin-bottom: 32px;
 			}
 			h5{
-				margin-bottom: 10px;
+				margin-bottom: 8px;
 			}
 			p{
-				margin-bottom: 30px;
+				margin-bottom: 32px;
 			}
 			@include MQ($M){
 				padding: $gutterw ($gutterw / 2);
@@ -150,20 +152,20 @@ html{
 	.container{
 	    justify-items: center;
 	    h3{
-	    	margin-bottom: 20px;
+	    	margin-bottom: 24px;
 	    }
 	    h6{
 	    	color:$brand2;
-	    	margin-bottom:45px;
+	    	margin-bottom:48px;
 	    	text-align: center;
 	    }
 	    .testimonial{
 	    	text-align: center;
-	    	margin-bottom: 30px;
-    	    min-height: 130px;
+	    	margin-bottom: 32px;
+    	    min-height: 135px;
     	    transition: all 1s ease;
 	    	p{
-	    		margin-bottom: 20px;
+	    		margin-bottom: 24px;
 	    	}
 	    	.name{
 	    		font:{
@@ -183,7 +185,7 @@ html{
 		    justify-items: center;
 		    align-items: center;
 	    	button{
-	    		padding:10px 15px;
+	    		padding:8px 16px;
 	    		box-shadow: $box-shadow;
 	    		border-radius:0;
 
@@ -215,10 +217,10 @@ html{
 		    color:$white;
 			img{
 			    height: 90px;
-			    margin-bottom: 30px;
+			    margin-bottom: 32px;
 			}
 			h6{
-				margin-bottom: 30px;
+				margin-bottom: 32px;
 				color:$white;
 				font:{
 					size: 1em;
@@ -238,3 +240,127 @@ html{
 		}
 	}
 }
+
+
+/*---------------------------------------------- 
+2. CONTACT PAGE
+------------------------------------------------*/
+
+#contact{
+	margin-top: 100px;
+	.container{
+		display: grid;
+		grid-template-columns:3fr 2fr;
+		grid-gap:$gutterw;
+		#map{
+			height:60vh;
+			width: auto;
+			background:#000;
+		}
+
+		h5{
+			margin-top: 32px;
+		}
+		p{
+			margin-top:8px;
+		}
+	}
+}
+
+
+/*---------------------------------------------- 
+2. IMM-APPLICANTS PAGE
+------------------------------------------------*/
+
+#languageSelector{
+	margin-top:100px;
+	#languages{
+		h5{
+			text-align: center;
+			margin-bottom:42px;
+		}
+		ul{
+			display:grid;
+			grid-template-columns: repeat( auto-fit, minmax(100px, auto) );	
+			// grid-auto-flow: column;
+			justify-content: center;
+			grid-gap:30px;
+			li{
+				display:grid;
+				
+				
+				justify-content: center;
+				align-items: center;
+				margin:0;
+				.btnSmall{
+					display:grid;
+					grid-auto-flow: row;
+					grid-gap:5px;
+
+					font:{
+						weight: $semibold;
+					}
+					span{
+						margin-bottom: 8px;
+					}
+					&.active{
+						color:$white;
+						background-color: $brand1;
+					}
+					
+				}
+			}
+		}
+	}
+}
+
+#why-us{
+	.container{
+		display: grid;
+		grid-gap: 32px;
+	}
+}
+
+#video{
+	.container{
+		width: 100%;
+		padding-bottom:56.25%;
+	    position:relative;
+	    height:0;
+		iframe{
+			left:0;
+		    top:0;
+		    height:100%;
+		    width:100%;
+		    position:absolute;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

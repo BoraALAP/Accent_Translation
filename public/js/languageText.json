@@ -1,0 +1,242 @@
+{
+	"english" : {
+		"id" : 1,
+		"language": "english",
+		"whyus": {
+			"accommodating":{
+				"title" : "Accomplishment",
+				"text" : ""
+			},
+			"competence":{
+				"title" : "Competence",
+				"text" : "In business since 1991"
+			},
+			"compliance":{
+				"title" : "Compliance",
+				"text" : ""
+			},
+			"experience":{
+				"title" : "Experience",
+				"text" : ""
+			},
+			"no-ProblemExperience":{
+				"title" : "No-Problem Experience",
+				"text" : ""
+			},
+			"time-savingService":{
+				"title" : "Time-saving Service",
+				"text" : ""
+			}
+		}
+	},
+	"spanish" : {
+		"id" : 2,
+		"language": "spanish",
+		"whyus": {
+			"accommodating":{
+				"title" : "Accomplishment2",
+				"text" : ""
+			},
+			"competence":{
+				"title" : "Competence",
+				"text" : "In business since 1991"
+			},
+			"compliance":{
+				"title" : "Compliance",
+				"text" : ""
+			},
+			"experience":{
+				"title" : "Experience",
+				"text" : ""
+			},
+			"no-ProblemExperience":{
+				"title" : "No-Problem Experience",
+				"text" : ""
+			},
+			"time-savingService":{
+				"title" : "Time-saving Service",
+				"text" : ""
+			}
+		}
+	},
+	"portuguese" : {
+		"id" : 3,
+		"language": "portuguese",
+		"whyus": {
+			"accommodating":{
+				"title" : "Accomplishment3",
+				"text" : ""
+			},
+			"competence":{
+				"title" : "Competence",
+				"text" : "In business since 1991"
+			},
+			"compliance":{
+				"title" : "Compliance",
+				"text" : ""
+			},
+			"experience":{
+				"title" : "Experience",
+				"text" : ""
+			},
+			"no-ProblemExperience":{
+				"title" : "No-Problem Experience",
+				"text" : ""
+			},
+			"time-savingService":{
+				"title" : "Time-saving Service",
+				"text" : ""
+			}
+		}
+	},
+	"italian": {
+		"id" : 4,
+		"language": "italian",
+		"whyus": {
+			"accommodating":{
+				"title" : "Accomplishment4",
+				"text" : ""
+			},
+			"competence":{
+				"title" : "Competence",
+				"text" : "In business since 1991"
+			},
+			"compliance":{
+				"title" : "Compliance",
+				"text" : ""
+			},
+			"experience":{
+				"title" : "Experience",
+				"text" : ""
+			},
+			"no-ProblemExperience":{
+				"title" : "No-Problem Experience",
+				"text" : ""
+			},
+			"time-savingService":{
+				"title" : "Time-saving Service",
+				"text" : ""
+			}
+		}
+	},
+	"russian": {
+		"id" : 5,
+		"language": "russian",
+		"whyus": {
+			"accommodating":{
+				"title" : "Accomplishment5",
+				"text" : ""
+			},
+			"competence":{
+				"title" : "Competence",
+				"text" : "In business since 1991"
+			},
+			"compliance":{
+				"title" : "Compliance",
+				"text" : ""
+			},
+			"experience":{
+				"title" : "Experience",
+				"text" : ""
+			},
+			"no-ProblemExperience":{
+				"title" : "No-Problem Experience",
+				"text" : ""
+			},
+			"time-savingService":{
+				"title" : "Time-saving Service",
+				"text" : ""
+			}
+		}
+	},
+	"ukrainian": {
+		"id" : 6,
+		"language": "ukrainian",
+		"whyus": {
+			"accommodating":{
+				"title" : "Accomplishment6",
+				"text" : ""
+			},
+			"competence":{
+				"title" : "Competence",
+				"text" : "In business since 1991"
+			},
+			"compliance":{
+				"title" : "Compliance",
+				"text" : ""
+			},
+			"experience":{
+				"title" : "Experience",
+				"text" : ""
+			},
+			"no-ProblemExperience":{
+				"title" : "No-Problem Experience",
+				"text" : ""
+			},
+			"time-savingService":{
+				"title" : "Time-saving Service",
+				"text" : ""
+			}
+		}
+	},
+	"chinese": {
+		"id" : 7,
+		"language": "chinese",
+		"whyus": {
+			"accommodating":{
+				"title" : "Accomplishment7",
+				"text" : ""
+			},
+			"competence":{
+				"title" : "Competence",
+				"text" : "In business since 1991"
+			},
+			"compliance":{
+				"title" : "Compliance",
+				"text" : ""
+			},
+			"experience":{
+				"title" : "Experience",
+				"text" : ""
+			},
+			"no-ProblemExperience":{
+				"title" : "No-Problem Experience",
+				"text" : ""
+			},
+			"time-savingService":{
+				"title" : "Time-saving Service",
+				"text" : ""
+			}
+		}
+	},
+	"arabic" :{
+		"id" : 8,
+		"language": "arabic",
+		"whyus": {
+			"accommodating":{
+				"title" : "Accomplishment8",
+				"text" : ""
+			},
+			"competence":{
+				"title" : "Competence",
+				"text" : "In business since 1991"
+			},
+			"compliance":{
+				"title" : "Compliance",
+				"text" : ""
+			},
+			"experience":{
+				"title" : "Experience",
+				"text" : ""
+			},
+			"no-ProblemExperience":{
+				"title" : "No-Problem Experience",
+				"text" : ""
+			},
+			"time-savingService":{
+				"title" : "Time-saving Service",
+				"text" : ""
+			}
+		}
+	}
+}

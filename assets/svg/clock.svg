@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="332px" height="332px" viewBox="0 0 332 332" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
-    <title>Group</title>
+<svg width="105px" height="106px" viewBox="0 0 105 106" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 6</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <circle id="path-1" cx="162" cy="160" r="150"></circle>
-        <filter x="-7.3%" y="-7.3%" width="117.3%" height="117.3%" filterUnits="objectBoundingBox" id="filter-2">
+        <ellipse id="path-1" cx="39.8918919" cy="39.6866841" rx="36.9369369" ry="37.2062663"></ellipse>
+        <filter x="-29.8%" y="-29.6%" width="170.4%" height="169.9%" filterUnits="objectBoundingBox" id="filter-2">
             <feOffset dx="4" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
             <feGaussianBlur stdDeviation="8" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
             <feColorMatrix values="0 0 0 0 0.568627451   0 0 0 0 0.137254902   0 0 0 0 0.160784314  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
@@ -18,17 +18,22 @@
             </feMerge>
         </filter>
     </defs>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="ui/icon/paper" transform="translate(-17.000000, -40.000000)">
-            <g id="Group" transform="translate(17.000000, 42.000000)">
-                <g id="Oval">
-                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
-                    <use fill="#DCDCDC" fill-rule="evenodd" xlink:href="#path-1"></use>
+    <g id="AccentTranslations" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="AccentTranslations---Home-2" transform="translate(-727.000000, -2616.000000)">
+            <g id="Group-6" transform="translate(666.000000, 2600.000000)">
+                <rect id="Rectangle" x="0" y="0" width="211" height="130"></rect>
+                <g id="ui/icon/paper" transform="translate(65.000000, 15.000000)">
+                    <g id="Group" transform="translate(4.186186, 10.417755)">
+                        <g id="Oval">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#DCDCDC" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        </g>
+                        <ellipse id="Oval" fill="#F0EFEF" cx="36.9369369" cy="37.2062663" rx="36.9369369" ry="37.2062663"></ellipse>
+                        <ellipse id="Oval" fill="#FFFFFF" cx="37.6756757" cy="37.7023499" rx="31.5195195" ry="31.7493473"></ellipse>
+                        <rect id="Rectangle" fill="#912329" x="35.2132132" y="35.2219321" width="29.5495495" height="4.96083551" rx="2.48041775"></rect>
+                        <path d="M34.9320981,29.3018613 L47.3296979,29.2629306 C48.6836121,29.2586791 49.7846229,30.3527968 49.7888745,31.706711 C49.7888906,31.7118524 49.7888906,31.7169938 49.7888744,31.7221352 L49.7888744,31.7221352 C49.7845726,33.0870983 48.6791113,34.1925469 47.3141481,34.1968332 L34.9165484,34.2357639 C33.5626342,34.2400154 32.4616233,33.1458977 32.4573718,31.7919835 C32.4573556,31.7868421 32.4573557,31.7817007 32.4573719,31.7765593 L32.4573719,31.7765593 C32.4616737,30.4115962 33.5671349,29.3061476 34.9320981,29.3018613 Z" id="Rectangle" fill="#912329" transform="translate(41.123123, 31.749347) rotate(-60.000000) translate(-41.123123, -31.749347) "></path>
+                    </g>
                 </g>
-                <circle id="Oval" fill="#F0EFEF" cx="150" cy="150" r="150"></circle>
-                <circle id="Oval" fill="#FFFFFF" cx="153" cy="152" r="128"></circle>
-                <rect id="Rectangle" fill="#912329" x="143" y="142" width="120" height="20" rx="8"></rect>
-                <rect id="Rectangle" fill="#912329" transform="translate(167.000000, 128.000000) rotate(-60.000000) translate(-167.000000, -128.000000) " x="132" y="118" width="70" height="20" rx="8"></rect>
             </g>
         </g>
     </g>

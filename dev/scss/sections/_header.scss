@@ -1,6 +1,6 @@
 header{
 	background-color:$white;
-	
+    height: 100px;
 	width: 100vw;
 	position: fixed;
 	top:0;
@@ -9,6 +9,7 @@ header{
     align-items: center;
     box-sizing: border-box;
     padding: 5vw;
+
 	#sticky{ 
 		position: relative;
 		justify-content: start;
@@ -40,7 +41,7 @@ header{
     		left:0px;
 			top:0px;
 			justify-content: center;
-		    #social{
+		    #social, a{
 		    	display: grid;
 		    }
 		}
@@ -53,7 +54,7 @@ header{
 
 		ul{
 			display: grid;
-		    grid-template-columns: repeat(5, auto);
+		    grid-auto-flow: row;
 		    align-items: center;
 	        position: fixed;
 		    left: 0;
@@ -79,7 +80,19 @@ header{
 		    			size:1em;
 		    		}
 		    		color: $gray2;
+		    		transition: all 0.3s ease;
+		    		&.active{
+			    		font:{
+			    			weight: $extrabold;
+			    		}
+			    	}
+
+			    	&:hover{
+			    		text-decoration: underline;
+			    	}
 		    	}
+
+		    	
 		    }
 
 		    .dropdown-menu{
@@ -142,7 +155,7 @@ header{
 			ul{
 				transform: translateX(0px);
 				grid-gap: $gutterw / 2;
-			    grid-template-columns: repeat(5, auto);
+			    grid-auto-flow: column;
 			    width: calc(100vw - 200px);
 			    background-color: inherit;
 			    width: inherit;
@@ -152,6 +165,7 @@ header{
 			    top: 0;
 			    right: 0;
 			    text-align: left;
+			    opacity: 1;
 			}
 		}
 	}
@@ -160,6 +174,6 @@ header{
 		height: inherit;
 		width: inherit;
 		position: absolute;
-		
+	    height: inherit;
 	}
 }

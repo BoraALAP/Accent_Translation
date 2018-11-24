@@ -51,6 +51,7 @@ h3{
         weight:$black;
     }
     color:$gray4;
+    text-transform: uppercase;
 }
 
 h4{
@@ -168,7 +169,7 @@ li{
     h5{
         font:{
             family: $font1;
-            size: 1.5em;
+            size: 1.35em;
             weight:$bold;
         }
         
@@ -178,7 +179,7 @@ li{
     h6{
         font:{
             family: $font2;
-            size: 1.2em;
+            size: 1em;
             weight:$semibold;
         }
         color:$gray4;
@@ -259,8 +260,13 @@ button{
 
 .btn{
     box-shadow: $box-shadow;
+    transition: all 0.3s ease;
     font:{
         weight: $bold;
+    }
+
+    &:hover{
+        box-shadow: 3px 3px 6px rgba($brand2, 0.3), 0px 3px 2px rgba($brand2, 0.3);
     }
 }
 
@@ -273,5 +279,10 @@ button{
     background-color: $white;
     color: $brand1;
     padding: 10px 30px;
+
+}
+
+.btnClear{
+    color:inherit;
 }
 

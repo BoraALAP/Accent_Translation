@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="20px" viewBox="0 0 28 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>CA</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="28" height="20" rx="2"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Flags" transform="translate(-76.000000, -124.000000)">
+            <g id="CA" transform="translate(76.000000, 124.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <rect stroke="#F5F5F5" stroke-width="0.5" x="0.25" y="0.25" width="27.5" height="19.5" rx="2"></rect>
+                <rect id="Mask" fill="#FF3131" mask="url(#mask-2)" x="20" y="0" width="8" height="20"></rect>
+                <rect id="Rectangle-2" fill="#FF3131" mask="url(#mask-2)" x="0" y="0" width="8" height="20"></rect>
+                <path d="M15.5655823,9.76775106 C15.4373147,9.89601861 15.3619792,9.85677083 15.3996932,9.66820081 L16,6.66666667 L14.6666667,7.33333333 L14,5.33333333 L13.3333333,7.33333333 L12,6.66666667 L12.6003068,9.66820081 C12.6369564,9.85144844 12.5620422,9.89537557 12.4344177,9.76775106 L11.5655823,8.89891561 C11.4373147,8.77064806 11.2291667,8.77083333 11.0926514,8.90734863 L10.6666667,9.33333333 L9.33333333,8.66666667 L10,10 L9.5740153,10.4259847 C9.44109032,10.5589097 9.44086202,10.7741954 9.56275876,10.8960921 L11.3333333,12.6666667 L13.3333333,12.6666667 L13.6666667,14.6666667 L14.3333333,14.6666667 L14.6666667,12.6666667 L16.6666667,12.6666667 L18.4372412,10.8960921 C18.5639494,10.7693839 18.5625,10.5625 18.4259847,10.4259847 L18,10 L18.6666667,8.66666667 L17.3333333,9.33333333 L16.9073486,8.90734863 C16.7744237,8.77442365 16.5620422,8.7712911 16.4344177,8.89891561 L15.5655823,9.76775106 Z" id="Rectangle-66" fill="#FF3131" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>
