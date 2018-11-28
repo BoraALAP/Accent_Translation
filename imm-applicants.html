@@ -130,6 +130,118 @@
 		</div>
 	</section>
 
+	<section id="quote">
+		<!-- <form id="test-form">
+  
+			<div>
+				<label>Your name and surname (exactly as it is in your passport)</label>
+				<input type="text" name="name" id="name" placeholder="Full Name" required/>
+			</div>
+
+			<div>
+				<label>Correct spelling (exactly as it is in their passport) for all other persons named in the documents that you are uploading:</label>
+				<input type="text" name="spelling" placeholder="Full Name Correct Spelling"/>
+			</div>
+
+			<div>
+				<label>Your Email</label>
+				<input type="text" name="email" id="email" placeholder="Your Email"/>
+			</div>
+
+			<div>
+				<label>Full address</label>
+				<input type="text" name="address" placeholder="Full Address" required />
+			</div>
+			
+			<div>
+				<label>City</label>
+				<input type="text" name="city" placeholder="Full Address" required/>
+			</div>
+
+			<div>
+				<label>Postal Code</label>
+				<input type="text" name="postal_code" placeholder="Full Address" required/>
+			</div>
+
+			<div>
+				<label>Referral lawyer’s name</label>
+				<input type="text" name="lawyers_name" placeholder="Referral lawyer’s name"/>
+			</div>
+
+			<div>
+				<label>Referral lawyer’s firm</label>
+				<input type="text" name="lawyers_firm" placeholder="Referral lawyer’s firm"/>
+			</div>
+
+			<div>
+				<label>Email of your lawyer</label>
+				<input type="text" name="lawyers_email" placeholder="Email of your lawyer"/>
+			</div>
+
+			<div>
+				<label>Do you want us to mail the translations directly to your lawyer?</label>
+				<input type="radio" id="yes" name="mail_to_lawyer" value="Yes" checked>
+				<input type="radio" id="no" name="mail_to_lawyer" value="No">
+			</div>
+
+			<div>
+				<label>Are you applying for a Provincial Nominee Program?</label>
+				<input type="radio" id="yes" name="provincial_nominee" value="Yes" checked>
+				<input type="radio" id="no" name="provincial_nominee" value="No">
+			</div>
+
+			<div>
+				<label>If YES, to which Province?</label>
+				<select name="if_yes" id="if_yes">
+				    <option name="-" value="-">--Please choose an option--</option>
+				    <option name="alberta" value="alberta">Alberta</option>
+				    <option name="british_columbia" value="british_columbia">British Columbia</option>
+				    <option name="manitoba" value="manitoba">Manitoba</option>
+				    <option name="new_brunswick" value="new_brunswick">New Brunswick</option>
+				    <option name="newfoundland_and_labrador" value="newfoundland_and_labrador">Newfoundland and Labrador</option>
+				    <option name="northwest_territories" value="northwest_territories">Northwest Territories</option>
+				    <option name="nova_scotia" value="nova_scotia">Nova Scotia</option>
+				    <option name="nunavut" value="nunavut">Nunavut</option>
+				    <option name="ontario" value="ontario">Ontario</option>
+				    <option name="prince_edward_island" value="prince_edward_island">Prince Edward Island</option>
+				    <option name="quebec" value="quebec">Quebec</option>
+				    <option name="saskatchewan" value="saskatchewan">Saskatchewan</option>
+				    <option name="yukon" value="yukon">Yukon</option>
+				</select>
+			</div>
+
+			<div>
+				
+				<div class="btn">
+	              <span>File</span>
+	              <input name="file_upload" id="file" type="file">
+	            </div>
+	            <div class="file-path-wrapper">
+	              <input class="file-path validate" type="text" placeholder="Select a file on your computer">
+	            </div>
+			</div>
+
+
+
+			<div>
+			<label>Comments - Special requests</label>
+			<textarea name="comment" placeholder="Comments" rows="5" cols="33"/></textarea>
+			</div>
+
+			<div>
+			<button class="btn btnDark" type="submit" id="submit-form">Submit</button>
+			</div>
+
+		</form> -->
+	
+		<form>
+			<input id="gdrive_file" type="text"> <a href="#" id="gdrive_file_selector">Select file</a><br/>
+			<input id="gdrive_folder" type="text"> <a href="#" id="gdrive_folder_selector">Select folder</a><br/>
+		</form>
+
+		<p>Disclaimer: translation must reflect the data in the original documents and we will use the names and the address that you gave to us. In case of discrepancy between the text in the document and your indication, we must keep our translation faithful to the original.</p>
+	</section>
+
 	<footer class="section">
 		<nav>
 			<div>
@@ -183,8 +295,12 @@
 	</footer>
 
 
+
+
+
 	<script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+	<script type="text/javascript" src="//apis.google.com/js/client.js"></script>
 	<script src="public/js/main.js"></script> 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98670015-1"></script> -->
@@ -195,5 +311,63 @@
 
 	gtag('config', 'UA-98670015-1');
 	</script> -->
+
+	<script>
+
+      var file, 
+          reader = new FileReader();
+
+      reader.onloadend = function(e) {
+        if (e.target.error != null) {
+          showError("File " + file.name + " could not be read.");
+          return;
+        } else {
+          google.script.run
+            .withSuccessHandler(showSuccess)
+            .uploadFileToGoogleDrive(e.target.result, file.name, $('input#name').val(), $('input#email').val());
+        }
+      };
+
+      function showSuccess(e) {
+        if (e === "OK") { 
+          $('#forminner').hide();
+          $('#success').show();
+        } else {
+          showError(e);
+        }
+      }
+
+      function submitForm() {
+
+        var files = $('#files')[0].files;
+
+        if (files.length === 0) {
+          showError("Please select a file to upload");
+          return;
+        }
+
+        file = files[0];
+
+        if (file.size > 1024 * 1024 * 5) {
+          showError("The file size should be < 5 MB. Please <a href='http://www.labnol.org/internet/file-upload-google-forms/29170/' target='_blank'>upgrade to premium</a> for receiving larger files in Google Drive");
+          return;
+        }
+
+        showMessage("Uploading file..");
+
+        reader.readAsDataURL(file);
+
+      }
+
+      function showError(e) {
+        $('#progress').addClass('red-text').html(e);
+      }
+
+      function showMessage(e) {
+        $('#progress').removeClass('red-text').html(e);
+      }
+
+
+    </script>
 </body>
 </html>

@@ -50,6 +50,166 @@
 		}return n[o].exports;
 	}var i = typeof require == "function" && require;for (var o = 0; o < r.length; o++) s(r[o]);return s;
 })({ 1: [function (require, module, exports) {
+		(function ($) {
+			var result_target = '';
+			var picker = null;
+			var gopts = {
+				'devkey': null, //api key
+				'appid': null,
+				'user': null,
+				'scope': 'https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/drive',
+				'authtok': null,
+				'init_stage': 0,
+				'width': 800,
+				'height': 400,
+				'callback': set_results,
+				'debug': false
+			};
+
+			var dlgopts = {};
+
+			function do_auth(callback) {
+				google_api_load();
+				if (gopts.authtok != null && gopts.user != null) {
+					if (callback) callback();
+					return;
+				}
+				if (gopts.debug) console.log("invoking autorization");
+				gapi.auth.authorize({
+					'client_id': gopts.appid,
+					'scope': gopts.scope,
+					'immediate': false
+				}, function (auth_result) {
+					if (auth_result && !auth_result.error) {
+						gopts.authtok = auth_result.access_token;
+						get_user_id(callback);
+					} else {
+						console.log("Could not authenticate you with Google");
+					}
+				});
+			};
+
+			function get_user_id(callback) {
+				gapi.client.setApiKey(gopts.devkey);
+				gapi.client.load('oauth2', 'v2', function () {
+					gapi.client.oauth2.userinfo.get().execute(function (resp) {
+						gopts.user = resp.email;
+						if (callback) callback();
+					});
+				});
+			};
+
+			function google_api_load() {
+				if ((gopts.init_stage & 3) == 3) return;
+				if (!(gopts.init_stage & 1)) gapi.load('auth', { 'callback': function () {
+						gopts.init_stage |= 1;
+					} });
+				if (!(gopts.init_stage & 2)) gapi.load('picker', { 'callback': function () {
+						gopts.init_stage |= 2;
+					} });
+			};
+
+			function set_results(target_id, data) {
+				if (data.action == google.picker.Action.PICKED) {
+					var doc = data.docs[0];
+					var file_id = doc.id;
+					var url = doc[google.picker.Document.URL];
+					var filename = doc[google.picker.Document.NAME];
+					var fullpath = "gdrive://" + filename + "/" + file_id;
+					$('#' + target_id).val(fullpath);
+					$('#' + target_id).change();
+				}
+			};
+
+			function show_dlg(target_id) {
+				$('#' + target_id).val('');
+				var elem_opts = dlgopts[target_id];
+
+				var view = new google.picker.DocsView(google.picker.ViewId.DOCS);
+				view.setMode(google.picker.DocsViewMode.LIST);
+				if (elem_opts.filter == 'application/vnd.google-apps.folder') {
+					view.setSelectFolderEnabled(true);
+					view.setMimeTypes('application/vnd.google-apps.folder');
+				}
+
+				var picker_builder = new google.picker.PickerBuilder().enableFeature(google.picker.Feature.NAV_HIDDEN).disableFeature(google.picker.Feature.MULTISELECT_ENABLED).setAppId(gopts.appid).addView(view)
+				//.addView(new google.picker.View(google.picker.ViewId.FOLDERS))
+				.setOAuthToken(gopts.authtok).setDeveloperKey(gopts.devkey).setCallback(function (data) {
+					gopts.callback(target_id, data);
+				}).setSize(gopts.width, gopts.height).setTitle(elem_opts.header);
+				if (gopts.user != null) picker_builder.setAuthUser(gopts.user);
+				picker = picker_builder.build();
+				picker.setVisible(true);
+				return picker;
+			};
+
+			$.fn.gdrive = function (action, options) {
+				if (action === 'init') {
+					gopts = $.extend(gopts, options);
+					google_api_load();
+					return this;
+				}
+				if (action === 'set') {
+					return this.each(function () {
+						var elemid = $(this).attr('id');
+						var elem_opts = $.extend($.extend(dlgopts[elemid], { 'trigger': null, 'header': '', 'filter': '' }), options);
+						dlgopts[elemid] = elem_opts;
+						var trig_elem = elem_opts.trigger == null ? elemid : elem_opts.trigger;
+						$('#' + trig_elem).click(function () {
+							do_auth(function () {
+								picker = show_dlg(elemid);
+							});
+						});
+					});
+				}
+				if (action === 'show') {
+					var elemid = this.attr('id');
+					do_auth(function () {
+						picker = show_dlg(elemid);
+					});
+					return this;
+				}
+				if (action === 'hide') {
+					if (null != picker) {
+						picker.setVisible(false);
+						picker = null;
+					}
+					return this;
+				}
+				if (action == 'token') {
+					return gopts.authtok;
+				}
+				if (action == 'user') {
+					return gopts.user;
+				}
+				if (action == 'setauth') {
+					var elem_opts = $.extend({ 'uid': null, 'token': null, 'callback': null }, options);
+					var target_uid = elem_opts.uid;
+					var target_tok = elem_opts.token;
+					var callback = elem_opts.callback;
+					do_auth(function () {
+						if (null != target_uid) $('#' + target_uid).val(gopts.user);
+						if (null != target_tok) $('#' + target_tok).val(gopts.authtok);
+						if (null != callback) callback();
+					});
+				}
+				if (action == 'debug') {
+					return gopts;
+				}
+			};
+		})(jQuery);
+	}, {}] }, {}, [1]);
+(function e(t, n, r) {
+	function s(o, u) {
+		if (!n[o]) {
+			if (!t[o]) {
+				var a = typeof require == "function" && require;if (!u && a) return a(o, !0);if (i) return i(o, !0);throw new Error("Cannot find module '" + o + "'");
+			}var f = n[o] = { exports: {} };t[o][0].call(f.exports, function (e) {
+				var n = t[o][1][e];return s(n ? n : e);
+			}, f, f.exports, e, t, n, r);
+		}return n[o].exports;
+	}var i = typeof require == "function" && require;for (var o = 0; o < r.length; o++) s(r[o]);return s;
+})({ 1: [function (require, module, exports) {
 		const app = {};
 
 		app.events = () => {
@@ -79,6 +239,9 @@
 				if (max > 3000) {
 					timing = 1 / 100000;
 				}
+
+				const comma = document.querySelector(".counterNum[data-type='comma']");
+				console.log(comma.split(0));
 
 				// return new Promise(resolve => {
 				const timer = setInterval(() => {
@@ -190,6 +353,24 @@
 			});
 		};
 
+		app.gDrive = () => {
+			$().gdrive('init', {
+				'devkey': 'AIzaSyAiX29-TMkuuvTGfHdv1FeH4hXpevMMhyw',
+				'appid': '929840368812-7eg5bbjl9v7j3kbhb0ajgu8a2ans3dq2.apps.googleusercontent.com'
+			});
+
+			$('#gdrive_file').gdrive('set', {
+				'trigger': 'gdrive_file_selector',
+				'header': 'Select a file',
+				'filter': ''
+			});
+			$('#gdrive_folder').gdrive('set', {
+				'trigger': 'gdrive_folder_selector',
+				'header': 'Select a folder',
+				'filter': 'application/vnd.google-apps.folder'
+			});
+		};
+
 		app.languageSelector = () => {
 			const languagesBtn = [].slice.call(document.querySelectorAll('#languages li .btn'));
 
@@ -240,11 +421,83 @@
 			fetching("english");
 		};
 
+		app.applicantForm = () => {
+			var $form = $('form#test-form'),
+			    url = 'https://script.google.com/macros/s/AKfycbxV-sS5obCWcSxQx6Mzc2Rln0dTDHWLPCUcy_APR1Emmuq1Iwbe/exec';
+
+			$('#submit-form').on('click', function (e) {
+				e.preventDefault();
+
+				// fetch(url, {
+				//   method: "GET",
+				//   mode: 'cors',
+				//   data: $form.serialize()
+				// }).then(res => {
+				// 	return res.json();
+				// 	console.log(res)
+				// }).catch(err => {
+				// 	console.log(err)
+				// })
+
+				var jqxhr = $.ajax({
+					url: url,
+					method: "GET",
+					dataType: "json",
+					data: $form.serialize()
+				}).done(res => {
+					console.log(res);
+				});
+
+				var file,
+				    reader = new FileReader();
+
+				function showSuccess(e) {
+					if (e === "OK") {
+						$('#forminner').hide();
+						$('#success').show();
+					} else {
+						showError(e);
+					}
+				}
+
+				var files = $('#file')[0].files;
+
+				if (files.length === 0) {
+					showError("Please select a file to upload");
+					return;
+				}
+
+				file = files[0];
+
+				if (file.size > 1024 * 1024 * 5) {
+					showError("The file size should be < 5 MB. Please <a href='http://www.labnol.org/internet/file-upload-google-forms/29170/' target='_blank'>upgrade to premium</a> for receiving larger files in Google Drive");
+					return;
+				}
+
+				showMessage("Uploading file..");
+
+				reader.readAsDataURL(file);
+
+				function showError(e) {
+					$('#progress').addClass('red-text').html(e);
+				}
+
+				function showMessage(e) {
+					$('#progress').removeClass('red-text').html(e);
+				}
+			});
+		};
+
+		app.applicationtest = () => {};
+
 		app.init = () => {
 			app.testimonials();
 			app.languageSelector();
 			app.inView();
 			app.events();
+			app.applicantForm();
+			app.applicationtest();
+			app.gDrive();
 		};
 
 		app.init();
