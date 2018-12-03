@@ -124,11 +124,11 @@
 		
 	</section>
 
-	<section id="video"> 
+	<!-- <section id="video"> 
 		<div class="container">
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/pOmu0LtcI6Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
-	</section>
+	</section> -->
 
 	<section id="quote">
 		<!-- <form id="test-form">
@@ -233,13 +233,15 @@
 			</div>
 
 		</form> -->
-	
-		<form>
-			<input id="gdrive_file" type="text"> <a href="#" id="gdrive_file_selector">Select file</a><br/>
-			<input id="gdrive_folder" type="text"> <a href="#" id="gdrive_folder_selector">Select folder</a><br/>
-		</form>
+		<div id="result"></div>
+		<a href="https://goo.gl/forms/Iy2zoJOcSgHq1j1k1" target="_blank"><button id="picker" class="btn btnDark">Get a Quote</button>
+		<!-- 
+		<button id="authorize_button" class="btn btnDark" style="display: none;">Authorize</button>
+		<button id="signout_button" class="btn btnDark" style="display: none;">Sign Out</button>
 
-		<p>Disclaimer: translation must reflect the data in the original documents and we will use the names and the address that you gave to us. In case of discrepancy between the text in the document and your indication, we must keep our translation faithful to the original.</p>
+		<pre id="content" style="white-space: pre-wrap;"></pre>
+
+		<p>Disclaimer: translation must reflect the data in the original documents and we will use the names and the address that you gave to us. In case of discrepancy between the text in the document and your indication, we must keep our translation faithful to the original.</p> -->
 	</section>
 
 	<footer class="section">
@@ -295,12 +297,132 @@
 	</footer>
 
 
+<!-- Google Drive API  -->
+<!-- <script>
+	  // Client ID and API key from the Developer Console
+      var CLIENT_ID = '599502455054-h8jlaev9hrq06egg3et72i185pkmaibu.apps.googleusercontent.com';
+      var API_KEY = 'AIzaSyBF-ckwPazVA541SEspNzkgtxGIZ-aAfHY';
 
+      // Array of API discovery doc URLs for APIs used by the quickstart
+      var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/drive/v3/rest"];
 
+      // Authorization scopes required by the API; multiple scopes can be
+      // included, separated by spaces.
+      var SCOPES = 'https://www.googleapis.com/auth/drive.metadata.readonly';
+
+      var authorizeButton = document.getElementById('authorize_button');
+      var signoutButton = document.getElementById('signout_button');
+
+      /**
+       *  On load, called to load the auth2 library and API client library.
+       */
+      function handleClientLoad() {
+        gapi.load('client:auth2', initClient);
+      }
+
+      /**
+       *  Initializes the API client library and sets up sign-in state
+       *  listeners.
+       */
+      function initClient() {
+        gapi.client.init({
+          apiKey: API_KEY,
+          clientId: CLIENT_ID,
+          discoveryDocs: DISCOVERY_DOCS,
+          scope: SCOPES
+        }).then(function () {
+          // Listen for sign-in state changes.
+          gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+
+          // Handle the initial sign-in state.
+          updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+          authorizeButton.onclick = handleAuthClick;
+          signoutButton.onclick = handleSignoutClick;
+        }, function(error) {
+          appendPre(JSON.stringify(error, null, 2));
+        });
+      }
+
+      /**
+       *  Called when the signed in status changes, to update the UI
+       *  appropriately. After a sign-in, the API is called.
+       */
+      function updateSigninStatus(isSignedIn) {
+        if (isSignedIn) {
+          authorizeButton.style.display = 'none';
+          signoutButton.style.display = 'block';
+          listFiles();
+        } else {
+          authorizeButton.style.display = 'block';
+          signoutButton.style.display = 'none';
+        }
+      }
+
+      /**
+       *  Sign in the user upon button click.
+       */
+      function handleAuthClick(event) {
+        gapi.auth2.getAuthInstance().signIn();
+      }
+
+      /**
+       *  Sign out the user upon button click.
+       */
+      function handleSignoutClick(event) {
+        gapi.auth2.getAuthInstance().signOut();
+      }
+
+      /**
+       * Append a pre element to the body containing the given message
+       * as its text node. Used to display the results of the API call.
+       *
+       * @param {string} message Text to be placed in pre element.
+       */
+      function appendPre(message) {
+        var pre = document.getElementById('content');
+        var textContent = document.createTextNode(message + '\n');
+        pre.appendChild(textContent);
+      }
+
+      /**
+       * Print files.
+       */
+      function listFiles() {
+        gapi.client.request({
+			'path': 'https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart',
+			'method': 'POST',
+			'resource': {
+				"mimeType": "application/pdf",
+				"parents": [
+				"1oS-wxHaUnqLJYvAnqYi_JOzlt2BAQBjz"
+				],
+				"name": "Test"
+			}
+        }).then(function(response) {
+        	
+
+          // appendPre('Files:');
+          // var files = response.result.files;
+          // console.log(files)
+          // if (files && files.length > 0) {
+          //   for (var i = 0; i < files.length; i++) {
+          //     var file = files[i];
+          //     appendPre(file.name + ' (' + file.id + ')');
+          //   }
+          // } else {
+          //   appendPre('No files found.');
+          // }
+        });
+      }
+</script> -->
 
 	<script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 	<script type="text/javascript" src="//apis.google.com/js/client.js"></script>
+	<!-- <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()"> -->
+    </script>
 	<script src="public/js/main.js"></script> 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98670015-1"></script> -->
@@ -312,62 +434,6 @@
 	gtag('config', 'UA-98670015-1');
 	</script> -->
 
-	<script>
-
-      var file, 
-          reader = new FileReader();
-
-      reader.onloadend = function(e) {
-        if (e.target.error != null) {
-          showError("File " + file.name + " could not be read.");
-          return;
-        } else {
-          google.script.run
-            .withSuccessHandler(showSuccess)
-            .uploadFileToGoogleDrive(e.target.result, file.name, $('input#name').val(), $('input#email').val());
-        }
-      };
-
-      function showSuccess(e) {
-        if (e === "OK") { 
-          $('#forminner').hide();
-          $('#success').show();
-        } else {
-          showError(e);
-        }
-      }
-
-      function submitForm() {
-
-        var files = $('#files')[0].files;
-
-        if (files.length === 0) {
-          showError("Please select a file to upload");
-          return;
-        }
-
-        file = files[0];
-
-        if (file.size > 1024 * 1024 * 5) {
-          showError("The file size should be < 5 MB. Please <a href='http://www.labnol.org/internet/file-upload-google-forms/29170/' target='_blank'>upgrade to premium</a> for receiving larger files in Google Drive");
-          return;
-        }
-
-        showMessage("Uploading file..");
-
-        reader.readAsDataURL(file);
-
-      }
-
-      function showError(e) {
-        $('#progress').addClass('red-text').html(e);
-      }
-
-      function showMessage(e) {
-        $('#progress').removeClass('red-text').html(e);
-      }
-
-
-    </script>
+	
 </body>
 </html>
