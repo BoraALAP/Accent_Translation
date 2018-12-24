@@ -1,288 +1,339 @@
-*{
+* {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
-body{
-    margin:0;
-    padding:0;
+body {
+    margin: 0;
+    padding: 0;
     width: 100vw;
     overflow-x: hidden;
-    font:{
-        family:$font1;
-    } 
-    
+
+    font: {
+        family: $font1;
+    }
+
 }
 
-h1,h2,h3,h4,h5,h6{
-    margin:0px;
-    padding:0px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+    padding: 0px;
 }
 
-h1{
-    font:{
+h1 {
+    font: {
         family: $font1;
         size: 1.6em;
-        weight:$black;
+        weight: $black;
     }
+
     color:$brand1;
     text-transform: uppercase;
 }
 
-h2{
-    font:{
+h2 {
+    font: {
         family: $font1;
         size: 1.8em;
-        weight:$black;
+        weight: $black;
     }
+
     color:$gray5;
     text-transform: uppercase;
 }
 
-h3{ 
-    font:{
+h3 {
+    font: {
         family: $font1;
         size: 1.5em;
-        weight:$black;
+        weight: $black;
     }
+
     color:$gray4;
     text-transform: uppercase;
+    margin-bottom: $gutterh / 4;
 }
 
-h4{
-    font:{
+h4 {
+    font: {
         family: $font2;
         size: 0.9em;
-        weight:500;
+        weight: 500;
     }
+
     color:$brand1;
 }
- 
-h5{
-    font:{
+
+h5 {
+    font: {
         family: $font1;
         size: 1.2em;
-        weight:$bold;
+        weight: $bold;
     }
-    
+
     color:$brand1;
 }
 
-h6{
-    font:{
+h6 {
+    font: {
         family: $font2;
         size: 1em;
-        weight:$semibold;
-    }
-    color:$gray4;
-}
-
-p{ 
-    font:{
-        family: $font2;
-        size: 0.8em;
-        weight:$regular;
-    }
-    margin:0;
-    color: $gray1; 
-    max-width: 600px;
-}
-
-a, button{
-    text-decoration:none;
-    font:{
-        size:0.875em;
         weight: $semibold;
     }
+
+    color:$gray4;
+    line-height: 24px;
+}
+
+p {
+    font: {
+        family: $font2;
+        size: 0.8em;
+        weight: $regular;
+    }
+
+    color: $gray1;
+    max-width: 600px;
+    line-height: 24px;
+}
+
+a,
+button {
+    text-decoration: none;
+
+    font: {
+        size: 0.875em;
+        weight: $semibold;
+    }
+
     color:$white;
 }
 
-nav{
-    a{
-        font:{
+nav {
+    a {
+        font: {
             family: $font1;
             size: 0.75em;
-            weight:800;
+            weight: 800;
         }
+
         color: $brand1;
     }
 }
 
-ul,li{
-    padding:0;
+ul,
+li {
+    padding: 0;
 }
 
-li{
+li {
+    @extend p;
     margin-bottom: 5px;
     list-style: none;
-    font:{
-        size:0.75em;
+
+    font: {
+        size: 0.75em;
     }
 }
 
 
-@include MQ($M){
+@include MQ($M) {
 
-    h1{
-        font:{
+    h1 {
+        font: {
             family: $font1;
             size: 1.6em;
-            weight:$black;
+            weight: $black;
         }
+
         color:$brand1;
         text-transform: uppercase;
     }
 
-    h2{
-        font:{
+    h2 {
+        font: {
             family: $font1;
             size: 2.25em;
-            weight:$black;
+            weight: $black;
         }
+
         color:$gray5;
         text-transform: uppercase;
     }
 
-    h3{ 
-        font:{
+    h3 {
+        font: {
             family: $font1;
             size: 2em;
-            weight:$black;
+            weight: $black;
         }
+
         color:$gray4;
     }
 
-    h4{
-        font:{
+    h4 {
+        font: {
             family: $font2;
-            size: 0.875em;
-            weight:500;
+            size: 1.5em;
+            weight: $bold;
         }
-        color:$brand1;
-    }
-     
-    h5{
-        font:{
-            family: $font1;
-            size: 1.35em;
-            weight:$bold;
-        }
-        
+
         color:$brand1;
     }
 
-    h6{
-        font:{
+    h5 {
+        font: {
+            family: $font1;
+            size: 1.25em;
+            weight: $bold;
+        }
+
+        color:$brand1;
+    }
+
+    h6 {
+        font: {
             family: $font2;
             size: 1em;
-            weight:$semibold;
+            weight: $semibold;
         }
+
         color:$gray4;
     }
 
-    p{ 
-        font:{
+    p {
+        font: {
             family: $font2;
             size: 0.8em;
-            weight:$regular;
+            weight: $regular;
         }
-        margin:0;
-        color: $gray1; 
+
+        color: $gray1;
     }
 
-    a, button{
-        text-decoration:none;
-        font:{
-            size:1em;
+    a,
+    button {
+        text-decoration: none;
+
+        font: {
+            size: 1em;
             weight: $semibold;
         }
+
         color:$white;
     }
 
-    nav{
-        a{
-            font:{
+    nav {
+        a {
+            font: {
                 family: $font1;
                 size: 1em;
-                weight:800;
+                weight: 800;
             }
+
             color: $brand1;
         }
     }
 
-    ul,li{
-        padding:0;
+    ul,
+    li {
+        padding: 0;
     }
 
-    li{
+    li {
         margin-bottom: 5px;
         list-style: none;
-        font:{
-            size:0.875em;
+
+        font: {
+            size: 0.875em;
         }
     }
 }
 
-section, .section{
-    
+section,
+.section {
+    margin-top: 100px;
     padding: $gutterh;
     width: 100vw;
     box-sizing: border-box;
-    @include MQ($M){
+
+    @include MQ($M) {
+        margin-top: $gutterh * 2;
         padding: $gutterh * 1.5;
-        margin-left:100px;
+        margin-left: 100px;
         width: calc(100vw - 100px);
     }
 
-    @include MQ($L){
+    @include MQ($L) {
         padding: $gutterh * 2;
     }
 }
 
-.container{
+.container {
     display: grid;
     box-sizing: border-box;
+    grid-gap: $gutterh;
 }
 
 /*******************      Button       ********************/
-button{
-    border:none;
-    border-radius:8px;
-    background:none;
+button {
+    border: none;
+    border-radius: $border-radius;
+    background: none;
     outline: none;
-
+    max-width: 600px;
 }
 
-.btn{
+.btn {
     box-shadow: $box-shadow;
     transition: all 0.3s ease;
-    font:{
+
+    font: {
         weight: $bold;
     }
 
-    &:hover{
+    &:hover {
         box-shadow: 3px 3px 6px rgba($brand2, 0.3), 0px 3px 2px rgba($brand2, 0.3);
     }
 }
 
-.btnDark{
+.btnDark {
     background-color: $brand1;
     padding: 15px 50px;
 }
 
-.btnSmall{
+.btnSmall {
     background-color: $white;
     color: $brand1;
     padding: 10px 30px;
 
 }
 
-.btnClear{
-    color:inherit;
+.btnClear {
+    color: inherit;
 }
 
+small {
+    color: $brand1;
+}
+
+.middleContainer {
+    background-color: rgba($brand2, 0.1);
+    padding: ($gutterh);
+    display: grid;
+    grid-column: span 2;
+    justify-self: center;
+    max-width: 850px;
+    width: 100%;
+    border-radius: $border-radius;
+}

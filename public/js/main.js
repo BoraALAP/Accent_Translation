@@ -214,24 +214,6 @@
 
 		app.events = () => {
 			const menuBut = document.getElementById('hamburger');
-			const picker = document.getElementById('picker');
-
-			menuBut.addEventListener('click', e => {
-				const menuUl = document.getElementById('menuUl');
-				const menuSVG = menuBut.querySelector('svg');
-				menuBut.classList.toggle('active');
-				menuUl.classList.toggle('active');
-
-				if (menuBut.classList.contains('active')) {
-					menuSVG.dataset.icon = 'times';
-				} else {
-					menuSVG.dataset.icon = 'bars';
-				}
-			});
-
-			picker.addEventListener('click', e => {
-				app.gDrive();
-			});
 		};
 
 		app.counters = () => {
@@ -246,7 +228,6 @@
 				}
 
 				const comma = document.querySelector(".counterNum[data-type='comma']");
-				console.log(comma.split(0));
 
 				// return new Promise(resolve => {
 				const timer = setInterval(() => {
@@ -477,6 +458,17 @@
 
 		app.applicationtest = () => {};
 
+		app.hoverLetter = () => {
+			const letters = document.querySelectorAll('#letters>h3');
+			const theWord = document.getElementById('the_word');
+
+			letters.forEach(letter => {
+				letter.addEventListener('mouseenter', e => {
+					theWord.innerText = e.target.getAttribute('data-name');
+				});
+			});
+		};
+
 		app.init = () => {
 			app.testimonials();
 			app.languageSelector();
@@ -484,6 +476,7 @@
 			app.events();
 			app.applicantForm();
 			app.applicationtest();
+			app.hoverLetter();
 		};
 
 		app.init();
