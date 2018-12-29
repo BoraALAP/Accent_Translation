@@ -13,7 +13,7 @@ body {
     padding: 0;
     width: 100vw;
     overflow-x: hidden;
-
+    font-size: 16px;
     font: {
         family: $font1;
     }
@@ -112,7 +112,6 @@ button {
     text-decoration: none;
 
     font: {
-        size: 0.875em;
         weight: $semibold;
     }
 
@@ -123,7 +122,6 @@ nav {
     a {
         font: {
             family: $font1;
-            size: 0.75em;
             weight: 800;
         }
 
@@ -140,10 +138,6 @@ li {
     @extend p;
     margin-bottom: 5px;
     list-style: none;
-
-    font: {
-        size: 0.75em;
-    }
 }
 
 
@@ -328,12 +322,14 @@ small {
 }
 
 .middleContainer {
-    background-color: rgba($brand2, 0.1);
-    padding: ($gutterh);
-    display: grid;
+  background-color: rgba($brand2, 0.1);
+  padding: ($gutterh);
+  display: grid;
+  justify-self: center;
+  max-width: 850px;
+  width: 100%;
+  border-radius: $border-radius;
+  @include MQ($M){
     grid-column: span 2;
-    justify-self: center;
-    max-width: 850px;
-    width: 100%;
-    border-radius: $border-radius;
+  }
 }

@@ -2,6 +2,10 @@ const app = {};
 
 app.events = () => {
 	const menuBut = document.getElementById('hamburger');
+	menuBut.addEventListener('click', () => {
+		const menuUl = document.getElementById('menuUl');
+		menuUl.classList.toggle('active');
+	})
 }
 
 app.counters = () => {
@@ -259,10 +263,6 @@ app.applicantForm = () => {
 
 
 	})
-}
-
-app.applicationtest = () => {
-
 }
 
 app.hoverLetter = () => {
