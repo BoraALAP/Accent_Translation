@@ -249,7 +249,7 @@ html{
 #contact{
 	.container{
 		display: grid;
-		grid-template-columns:3fr 2fr;
+		
 		grid-gap:$gutterw;
 		#map{
 			height:60vh;
@@ -263,6 +263,10 @@ html{
 		p{
 			margin-top:8px;
 		}
+	}
+
+	@include MQ($M) {
+		grid-template-columns:3fr 2fr;
 	}
 }
 
@@ -333,7 +337,7 @@ html{
 }
 
 /*---------------------------------------------- 
-3. IMM-PROFESSIONALS PAGE
+4. IMM-PROFESSIONALS PAGE
 ------------------------------------------------*/
 #immProff{
 	.container{
@@ -348,7 +352,7 @@ html{
 
 
 /*---------------------------------------------- 
-4. WHO-WE-ARE
+5. WHO-WE-ARE
 ------------------------------------------------*/
 
 #who-we-are{
@@ -361,7 +365,7 @@ html{
 }
 
 /*---------------------------------------------- 
-5. Why Us
+6. Why Us
 ------------------------------------------------*/
 #why-us-main{
 	.container{
@@ -461,7 +465,7 @@ html{
 }
 
 /*---------------------------------------------- 
-5. Refer Accent
+7. Refer Accent
 ------------------------------------------------*/
 #refer-accent{
 	.container{
@@ -470,10 +474,6 @@ html{
 		}
 	}
 }
-
-
-
-
 
 
 
