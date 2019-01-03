@@ -248,9 +248,6 @@ html{
 
 #contact{
 	.container{
-		display: grid;
-		
-		grid-gap:$gutterw;
 		#map{
 			height:60vh;
 			width: auto;
@@ -263,10 +260,9 @@ html{
 		p{
 			margin-top:8px;
 		}
-	}
-
-	@include MQ($M) {
-		grid-template-columns:3fr 2fr;
+		@include MQ($M) {
+			grid-template-columns:3fr 2fr;
+		}
 	}
 }
 
@@ -320,32 +316,22 @@ html{
 
 }
 
-#video{
-	.container{
-		width: 100%;
-		padding-bottom:56.25%;
-	    position:relative;
-	    height:0;
-		iframe{
-			left:0;
-		    top:0;
-		    height:100%;
-		    width:100%;
-		    position:absolute;
-		}
-	}
-}
+
 
 /*---------------------------------------------- 
 4. IMM-PROFESSIONALS PAGE
 ------------------------------------------------*/
 #immProff{
 	.container{
+		
 		ul{
 			padding:0 2em ;
 			li{
 				list-style: inherit;
 			}
+		}
+		@include MQ($L){
+			grid-template-columns: 1fr 1fr;
 		}
 	}
 }

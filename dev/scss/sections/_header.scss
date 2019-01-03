@@ -35,7 +35,7 @@ header {
 			width: 100px;
 			height: 100vh;
 			padding: 50px 0;
-			background: url('../../assets/svg/stickyBg.svg');
+			background: url('../../assets/svg/stickyBg.svg'), $white;
 			background-position: top center;
 			background-repeat: no-repeat;
 			background-size: cover;

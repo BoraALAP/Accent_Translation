@@ -10,28 +10,37 @@ app.events = () => {
 
 app.counters = () => {
 	const numbers = [].slice.call(document.querySelectorAll('.counterNum'));
+	const comma = document.querySelector(".counterNum[data-type='comma']");
+	console.log(comma.dataset.to / 10);
+	
 	numbers.forEach((item) => {
-		const max = item.dataset.to;
-		let min = 0;
-		let timing = 100
+		let max = item.dataset.to;
+		let min = 0; 
+		let timing;
 
-		if (max > 3000) {
-			timing = 1 / 100000;
+		console.log(max);
+		
+
+		if (max > 3000){
+			timing = item.dataset.to / 1200;
+		} else if (item.hasAttribute('data-type')) {	
+			max = item.dataset.to/10;		
+			timing = item.dataset.to / 10;
+		} else {
+			max = item.dataset.to;
+			timing = 10;
 		}
 
-		const comma = document.querySelector(".counterNum[data-type='comma']");
-
-		// return new Promise(resolve => {
 		const timer = setInterval(() => {
 			if (min < max) {
-				if (max > 3000) {
-					min = min + 10;
-				} else {
-					min++;
-				}
+				min = min + (max / 1000);
 			}
-			item.innerText = min;
-			if (min == max) {
+			if (item.hasAttribute('data-type')){
+				item.innerText = min.toFixed(1);
+			} else {
+				item.innerText = Math.round(min);
+			}
+			if (min >= max) {
 				clearInterval(timer);
 			}
 		}, timing)
@@ -282,7 +291,6 @@ app.init = () => {
 	app.inView();
 	app.events();
 	app.applicantForm();
-	app.applicationtest();
 	app.hoverLetter();
 }
 
