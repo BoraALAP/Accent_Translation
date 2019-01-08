@@ -8,7 +8,7 @@ header {
 	grid-template-columns: 1fr 1fr;
 	align-items: center;
 	box-sizing: border-box;
-	padding: $gutterh;
+	padding: 25px;
 
 	#sticky {
 		position: relative;
@@ -23,13 +23,31 @@ header {
 			align-content: end;
 		}
 
-		img {
-			height: 40px;
+		a{
+			position: relative;
+			width: 50px;
+			svg#logo {
+				height: 50px;
+				width: auto;
+				#ACCENT{
+					fill:#912329;
+				}
 
-			@include MQ($M) {
-				height: inherit;
+				#ACCENT, #TRANSLATIONS{
+					opacity: 1;
+					transition: all 1s ease-in-out;
+
+					&.hide{
+						opacity: 0;
+					}
+				}
+	
+				@include MQ($M) {
+					height: 50px
+				}
 			}
 		}
+		
 
 		@include MQ($M) {
 			width: 100px;
@@ -191,6 +209,6 @@ header {
 		height: inherit;
 		width: inherit;
 		position: absolute;
-		height: inherit;
+		padding: $gutterh;
 	}
 }
