@@ -356,10 +356,9 @@ html{
 	.container{
 		display: grid;
 		.whiteContainer{
-			padding: ($gutterh * 2) ($gutterh);
+			padding: ($gutterh * 2) 0;
 			display: grid;
 			justify-self: center;
-			max-width: 850px;
 	    width: 100%;
 			#whyus_list{
 				display: grid;
@@ -442,7 +441,7 @@ html{
 				grid-column: span 2;
 				#whyus_list{
 					grid-column: span 2;
-					grid-template-columns: repeat(3, 1fr);
+					grid-template-columns: repeat(auto-fill, minmax(200px,auto));
 				}
 			}
 		}
