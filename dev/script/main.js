@@ -161,7 +161,7 @@ app.languageSelector = () => {
 
 	languagesBtn.forEach((language) => {
 		const flag = language.querySelector('img');
-		flag.setAttribute("src", `/assets/svg/flag/${language.innerText.toLowerCase()}.svg`);
+		flag.setAttribute("src", `./assets/svg/flag/${language.innerText.toLowerCase()}.svg`);
 
 		language.addEventListener('click', (e) => {
 			let languageName = language.textContent.toLowerCase();
