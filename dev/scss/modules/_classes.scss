@@ -25,11 +25,12 @@ svg path{
 }
 
 #video{
-	.container{
+	.vidcon{
 		width: 100%;
 		padding-bottom:56.25%;
 	    position:relative;
-	    height:0;
+		height:0;
+		justify-content: center;
 		iframe{
 			left:0;
 		    top:0;

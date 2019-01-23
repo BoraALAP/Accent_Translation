@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>insurance</title>
+    <desc>Created with Sketch.</desc>
+    <g id="insurance" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M12,17.5 C18.8571429,17.5 24.8571429,15 30,10 C34.7142857,15 40.7142857,17.5 48,17.5 C48,31.8120033 42,42.6453366 30,50 C18,42.6453366 12,31.8120033 12,17.5 Z M15,19.375 C15,31.5402028 20,40.7485361 30,47 C40,40.7485361 45,31.5402028 45,19.375 C38.9285714,19.375 33.9285714,17.25 30,13 C25.7142857,17.25 20.7142857,19.375 15,19.375 Z M32,28 L38,28 L38,32 L32,32 L32,38 L28,38 L28,32 L22,32 L22,28 L28,28 L28,22 L32,22 L32,28 Z" id="Combined-Shape" fill="#912329"></path>
+    </g>
+</svg>

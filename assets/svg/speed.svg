@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>speed</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M14.8008286,43 C11.8077984,39.503945 10,34.9630895 10,30 C10,18.954305 18.954305,10 30,10 C41.045695,10 50,18.954305 50,30 C50,34.9630895 48.1922016,39.503945 45.1991714,43 L40.9550335,43 C44.6517872,39.8815692 47,35.2150118 47,30 C47,20.6111593 39.3888407,13 30,13 C20.6111593,13 13,20.6111593 13,30 C13,35.2150118 15.3482128,39.8815692 19.0449665,43 L14.8008286,43 Z M30,20 L31.8103818,39.0090091 C31.9056053,40.0088553 31.1722636,40.8965847 30.1724173,40.9918082 C30.1151069,40.9972663 30.0575697,41 30,41 C28.9956295,41 28.1814264,40.1857969 28.1814264,39.1814264 C28.1814264,39.1238567 28.1841601,39.0663194 28.1896182,39.0090091 L30,20 Z" id="path-1"></path>
+    </defs>
+    <g id="speed" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Combined-Shape" fill="#912329" xlink:href="#path-1"></use>
+    </g>
+</svg>

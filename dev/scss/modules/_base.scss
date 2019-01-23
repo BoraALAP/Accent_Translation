@@ -256,16 +256,21 @@ li {
 
 section,
 .section {
-    margin-top: 100px;
     padding: $gutterh;
     width: 100vw;
     box-sizing: border-box;
 
+    &:first-of-type{
+        margin-top: 100px;
+    }
+
     @include MQ($M) {
-        margin-top: $gutterh * 2;
         padding: $gutterh * 1.5;
         margin-left: 100px;
         width: calc(100vw - 100px);
+        &:first-of-type{
+            margin-top: $gutterh * 2;
+        }
     }
 
     @include MQ($L) {
