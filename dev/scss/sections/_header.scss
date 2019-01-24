@@ -9,6 +9,7 @@ header {
 	align-items: center;
 	box-sizing: border-box;
 	padding: 25px;
+	z-index: 10000;
 
 	#sticky {
 		position: relative;

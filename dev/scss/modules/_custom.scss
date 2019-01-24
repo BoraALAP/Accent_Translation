@@ -6,5 +6,8 @@
 
 .span2{
 	display: grid;
-	grid-column: span 2;
+	
+	@include MQ($M){
+		grid-column: span 2;
+	}
 }
