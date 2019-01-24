@@ -277,12 +277,20 @@ app.applicantForm = () => {
 app.hoverLetter = () => {
 	const letters = document.querySelectorAll('#letters>h3');
 	const theWord = document.getElementById('the_word');
-
-	letters.forEach((letter) => {
-		letter.addEventListener('mouseenter', (e) => {
-			theWord.innerText = e.target.getAttribute('data-name');
-		});
-	})
+	
+	let currentLetter = 0;
+	
+	console.log(letters);
+	
+	setInterval( function() {
+		theWord.innerText = letters[currentLetter].getAttribute('data-name');
+		letters.forEach( (letter) => {
+			letter.classList.remove("opacity");
+		})
+		letters[currentLetter].classList.add("opacity")
+		currentLetter = (currentLetter+1)%letters.length;
+		
+	},4000)
 }
 
 app.init = () => {

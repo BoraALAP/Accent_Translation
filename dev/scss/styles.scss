@@ -355,6 +355,8 @@ html{
 #why-us-main{
 	.container{
 		display: grid;
+		grid-template-columns: 1fr 1fr;
+    justify-items: center;
 		.whiteContainer{
 			padding: ($gutterh * 2) 0;
 			display: grid;
@@ -379,6 +381,7 @@ html{
 		}
 		.middleContainer{
 			align-self: start;
+			max-width: 600px;
 			&.single{
 				grid-column: auto;
 			}
@@ -393,7 +396,7 @@ html{
 					color:$brand1;
 					opacity: 0.3;
 					transition: all 0.5s ease;
-					&:hover{
+					&.opacity{
 						opacity: 1;
 					}
 				}
@@ -442,7 +445,7 @@ html{
 				grid-column: span 2;
 				#whyus_list{
 					grid-column: span 2;
-					grid-template-columns: repeat(auto-fill, minmax(200px,auto));
+					grid-template-columns: repeat(auto-fill, minmax(300px,auto));
 				}
 			}
 		}
