@@ -260,11 +260,11 @@
 				app.testimonials();
 				app.inView();
 			}
-			if (window.location.pathname == "././imm-applicants.html") {
+			if (window.location.pathname == "/Accent_Translation/imm-applicants.html") {
 				app.languageSelector();
 			}
 			app.events();
-			if (window.location.pathname == "././why-us.html") {
+			if (window.location.pathname == "/Accent_Translation/why-us.html") {
 				app.hoverLetter();
 			}
 		};
