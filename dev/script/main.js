@@ -203,11 +203,14 @@ app.hoverLetter = () => {
 	const theWord = document.getElementById('the_word');
 	
 	let currentLetter = 0;
+	console.log("set on the page");
 	
 	setInterval( function() {
 		theWord.innerText = letters[currentLetter].getAttribute('data-name');
+		console.log("interval start");
 		letters.forEach( (letter) => {
 			letter.classList.remove("opacity");
+			console.log("each letter run");
 		})
 		letters[currentLetter].classList.add("opacity")
 		currentLetter = (currentLetter+1)%letters.length;
@@ -220,11 +223,11 @@ app.init = () => {
 		app.testimonials();
 		app.inView();
 	}
-	if(window.location.pathname == "/imm-applicants.html"){ 
+	if(window.location.pathname == "./imm-applicants.html"){ 
 		app.languageSelector();
 	}
 	app.events();
-	if(window.location.pathname == "/why-us.html"){ 
+	if(window.location.pathname == "./why-us.html"){ 
 		app.hoverLetter();
 	}
 }
