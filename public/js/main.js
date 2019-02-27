@@ -265,17 +265,17 @@
 		};
 
 		app.init = () => {
-			if (window.location.pathname == "./") {
-				app.testimonials();
-				app.inView();
-			}
-			if (window.location.pathname == "./imm-applicants.html") {
-				app.languageSelector();
-			}
+			// if(window.location.pathname == "./"){ 
+			app.testimonials();
+			app.inView();
+			// }
+			// if(window.location.pathname == "./imm-applicants.html"){ 
+			app.languageSelector();
+			// }
 			app.events();
-			if (window.location.pathname == "./why-us.html") {
-				app.hoverLetter();
-			}
+			// if(window.location.pathname == "./why-us.html"){ 
+			app.hoverLetter();
+			// }
 		};
 
 		app.init();
