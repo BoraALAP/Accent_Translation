@@ -54,9 +54,7 @@ html{
 		}
 		h6{
 			margin-bottom:24px;
-			font:{
-				weight: $regular;
-			};
+			font-weight: $regular;
 		}
 
 		.text{
@@ -168,9 +166,7 @@ html{
 	    		margin-bottom: 24px;
 	    	}
 	    	.name{
-	    		font:{
-	    			weight: $extrabold;
-	    		}
+	    		font-weight: $extrabold;
 	    		color: $gray4;
 	    	}
 	    	&.transition{
@@ -212,26 +208,22 @@ html{
 		.counterHome{
 			display: grid;
 			align-content:center;
-		    justify-items: center;
-		    text-align: center;
-		    color:$white;
+			justify-items: center;
+			text-align: center;
+			color:$white;
 			img{
-			    height: 90px;
-			    margin-bottom: 32px;
+				height: 90px;
+				margin-bottom: 32px;
 			}
 			h6{
 				margin-bottom: 32px;
 				color:$white;
-				font:{
-					size: 1em;
-					weight:$bold;
-				}
+				font-size: 1em;
+				font-weight:$bold;
 			}
 			.number{
-				font:{
-					size: 3em;
-					weight:$black;
-				}
+				font-size: 3em;
+				font-weight:$black;
 			}
 		}
 		@include MQ($M){
@@ -294,26 +286,38 @@ html{
 					display:grid;
 					grid-auto-flow: row;
 					grid-gap:5px;
-
-					font:{
-						weight: $semibold;
-					}
+					font-weight: $semibold;
 					span{
 						margin-bottom: 8px;
 					}
 					&.active{
 						color:$white;
 						background-color: $brand1;
-					}
-					
+					}	
 				}
 			}
 		}
 	}
 }
 
-#why-us{
-
+#applicants{
+	padding-top:0;
+	.container{
+		grid-gap: 0;
+		text-align: center;
+		justify-content: center;
+		#video{
+			margin-top: 3vh;
+			margin-bottom: 3vh;
+			max-width: 800px;
+		}
+		p{
+			justify-self: center;
+		}
+		a{
+			margin-top: 30px;
+		}
+	}
 }
 
 
@@ -355,7 +359,7 @@ html{
 #why-us-main{
 	.container{
 		display: grid;
-    justify-items: center;
+		justify-items: center;
 		.whiteContainer{
 			padding: ($gutterh * 2) 0;
 			display: grid;

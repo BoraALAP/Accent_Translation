@@ -173,22 +173,31 @@ app.languageSelector = () => {
 	})
 
 	const markupWhyUs = (text, language) => {
-		const container = document.getElementById('why-us');
+		const container = document.getElementById('applicants');
 		const res = text[language];
 
-		const generateText = (data) => {
-			let result = []
-			for (let line in data) {
-				result.push(`<div><h6>${data[line].title}</h6><p>${data[line].text}</p></div>`)
-			}
+		// const generateText = (data) => {
+		// 	let result = []
+		// 	for (let line in data) {
+		// 		result.push(`<div><h6>${data[line].title}</h6><p>${data[line].text}</p></div>`)
+		// 	}
 
-			return result.join('')
-		}
+		// 	return result.join('')
+		// }
 
 		container.innerHTML = `
 		<div class="container">
-			<h5>Accent Translations is:</h5>
-			${generateText(res.whyus)}
+			${res.whyus.top.text}
+
+			<div id="video"> 
+				<div class="vidcon">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/pOmu0LtcI6Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			
+			${res.whyus.bottom.text}
+
+			<a href="https://goo.gl/forms/quc15jksGYEkYEjB3" target="_blank"><button class="btn btnDark">Get a Quote</button></a>
 		</div>`
 	}
 
@@ -215,7 +224,7 @@ app.hoverLetter = () => {
 		letters[currentLetter].classList.add("opacity")
 		currentLetter = (currentLetter+1)%letters.length;
 		
-	},4000)
+	},2500)
 }
 
 app.init = () => {
@@ -223,11 +232,11 @@ app.init = () => {
 		app.testimonials();
 		app.inView();
 	}
-	if(window.location.pathname == "/Accent_Translation/imm-applicants.html"){ 
+	if(window.location.pathname == "/imm-applicants.html"){ 
 		app.languageSelector();
 	}
 	app.events();
-	if(window.location.pathname == "/Accent_Translation/why-us.html"){ 
+	if(window.location.pathname == "/why-us.html"){ 
 		app.hoverLetter();
 	}
 }
