@@ -228,15 +228,15 @@ app.hoverLetter = () => {
 }
 
 app.init = () => {
-	if(window.location.pathname == "/"){ 
+	if(window.location.pathname == "./"){ 
 		app.testimonials();
 		app.inView();
 	}
-	if(window.location.pathname == "/imm-applicants.html"){ 
+	if(window.location.pathname == "./imm-applicants.html"){ 
 		app.languageSelector();
 	}
 	app.events();
-	if(window.location.pathname == "/why-us.html"){ 
+	if(window.location.pathname == "./why-us.html"){ 
 		app.hoverLetter();
 	}
 }
