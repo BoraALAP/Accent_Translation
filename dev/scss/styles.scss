@@ -264,6 +264,13 @@ html{
 ------------------------------------------------*/
 
 #languageSelector{
+	h3{
+		display: none;
+		justify-self: center;
+		&.active{
+			display: grid;
+		}
+	}
 	#languages{
 		h5{
 			text-align: center;
@@ -277,9 +284,6 @@ html{
 			grid-gap:30px;
 			li{
 				display:grid;
-				
-				
-				justify-content: center;
 				align-items: center;
 				margin:0;
 				.btnSmall{
@@ -287,6 +291,7 @@ html{
 					grid-auto-flow: row;
 					grid-gap:5px;
 					font-weight: $semibold;
+					padding: 10px;
 					span{
 						margin-bottom: 8px;
 					}
@@ -347,8 +352,17 @@ html{
 #who-we-are{
 	.container{
 		grid-gap: $gutterh/2;
+		justify-items: center;
+		img{
+			width: 100%;
+			display: grid;
+			max-width: 60vw;
+		}
 		p{
 			margin-bottom: $gutterw / 4;
+		}
+		@include MQ($S){
+			grid-template-columns: 60% 40%;
 		}
 	}
 }

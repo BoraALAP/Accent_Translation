@@ -6,6 +6,9 @@
 			"top":{
 				"text" : "<h5>In order to receive a quote, please watch the video for instructions.</h5><p>After watching the video, please scroll down and click on “Get a quote”</p>"
 			},
+			"youtube":{
+				"src": "https://youtube.com/embed/YFCVle1a6xw"
+			},
 			"bottom":{
 				"text" : "<p>Assigning your translation to Accent Translations means putting your application in good hands. We know your needs and what you expect from us. Our meticulous project management, together with the experience and professionalism of our translators are your guarantee for high quality, fast service, helping you to create a successful application.</p><p>Choose Accent Translations and get ready to come to Canada!</p>"
 			}
@@ -17,6 +20,8 @@
 		"whyus": {
 			"top":{
 				"text" : "<h5>Para recibir una cotización, por favor mire el video con instrucciones.</h5><p>Después de mirar el video, por favor mueva hacia abajo en la página y presione “Get a quote”</p>"
+			},"youtube":{
+				"src": "https://youtube.com/embed/WnVvyjVMQrM"
 			},
 			"bottom":{
 				"text" : "<p>Asignar su traducción a Accent Translations significa poner su aplicación en buenas manos. Nosotros conocemos sus necesidades y expectativas. Nuestro meticulosa gerencia de proyectos unido a la experiencia y profesionalismo de nuestros traductores son su garantía para la más alta calidad, servicio rápido,ayudándole a crear una aplicación exitosa.</p><p>Escoja Accent Translations y esté listo a llegar a Canadá.</p>"
@@ -29,6 +34,8 @@
 		"whyus": {
 			"top":{
 				"text" : "<h5>Para receber um orçamento, por favor visione o vídeo em baixo.</h5><p>Após visionar o vídeo, desça ao fundo da página e clique em “Get a quote”</p>"
+			},"youtube":{
+				"src": "https://youtube.com/embed/HhxyczIrQCg"
 			},
 			"bottom":{
 				"text" : "<p>Confiar a sua tradução a Accent Translations significa colocar o seu processo de imigração em boas mãos. Conhecemos as suas necessidades e sabemos aquilo que espera de nós. A nossa minuciosa gestão de projetos, aliada à experiência e profissionalismo dos nossos tradutores, são garantia de alta qualidade e serviço rápido, fatores que contribuem para o sucesso do seu processo de candidatura.</p><p>Escolha Accent Translations e prepare-se para vir para o Canadá!</p>"
@@ -41,6 +48,8 @@
 		"whyus": {
 			"top":{
 				"text" : "<h5>Per ottenere un preventivo, segui le istruzioni fornite nel video sottostante.</h5><p>Dopo aver guardato il video, scorri verso il basso e fai clic su “Get a quote”</p>"
+			},"youtube":{
+				"src": "https://youtube.com/embed/amud3kla_o4"
 			},
 			"bottom":{
 				"text" : "<p>Affidando la traduzione ad Accent Translations, metti la tua domanda di immigrazione in buone mani. Conosciamo bene le tue esigenze e cosa ti aspetti da noi. Il modo meticoloso in cui gestiamo i nostri progetti, insieme all’esperienza e alla professionalità dei nostri traduttori, sono la garanzia di un servizio rapido e di alta qualità che contribuirà all’esito positivo della tua domanda di immigrazione.</p><p>Scegli Accent Translations e fai le valigie per il Canada!</p>"
@@ -53,6 +62,8 @@
 		"whyus": {
 			"top":{
 				"text" : "<h5>Просмотрите видео с инструкциями о том, как получить ценовое предложение.</h5><p>После просмотра видео, нажмите на кнопку “Get a quote” ниже</p>"
+			},"youtube":{
+				"src": "https://youtube.com/embed/IX9f3Nz647Y"
 			},
 			"bottom":{
 				"text" : "<p>Доверив свой перевод «Accent Translations», вы передаете свое заявление в надежные руки. Мы знаем, что вам необходимо и чего вы ожидаете от нас. Наше скрупулезное управление проектами, а также опыт и профессионализм наших переводчиков - это гарантия высокого качества и быстрого обслуживания, которые помогут вам подготовить успешное заявление на иммиграцию.</p><p>Выберите 'Accent Translations' и готовьтесь к переезду в Канаду!</p>"
@@ -65,6 +76,8 @@
 		"whyus": {
 			"top":{
 				"text" : "<h5>Для одержання довідкової ціни, будь ласка, подивіться відео з інструкціями.</h5><p>Після того, як подивитесь відео, будь ласка, пересуньтеся нижче та натисніть на “Get a quote”</p>"
+			},"youtube":{
+				"src": "https://youtube.com/embed/S7kCMefhZ5A"
 			},
 			"bottom":{
 				"text" : "<p>Замовити переклад в Accent Translations – це означає віддати вашу подачу до добрих рук. Ми знаємо, що вам потрібно і що ви очікуєте від нас. Наші ретельні менеджери проектів вкупі з досвідченими професійними перекладачами – це ваша гарантія найвищої якості та найшвидших послуг, що допоможуть вам в створенні успішної заяви.</p><p>Оберіть Accent Translations та приготуйтеся до переїзду до Канади!</p>"
@@ -77,6 +90,8 @@
 		"whyus": {
 			"top":{
 				"text" : "<h5>为了获取报价，请先观看下面的视频作为指导</h5><p>观看视频后，请下滑鼠标然后点击“ Get a quote”</p>"
+			},"youtube":{
+				"src": "https://youtube.com/embed/YmSS5cmCck8"
 			},
 			"bottom":{
 				"text" : "<p>委托我们Accent Translations 做翻译就是把您的申请材料交给了专业能手。 我们了解您的需求和期望。 敬业的 项目经理和专业的翻译是我们为您提供高质量翻译､快速服务和协助您成功建立移民申请的保证。</p><p>选择Accent Translations, 做好来加拿大的准备吧！</p>"
@@ -88,10 +103,16 @@
 		"language": "arabic",
 		"whyus": {
 			"top":{
-				"text" : "<h5 dir='rtl'>لكي تحصل على عرض أسعار، رجاء مشاهدة الفيديو الذي به الإرشادات.</h5><p dir='rtl'>'Get a quote' بعد مشاهدة الفيديو، اذهب إلى أسفل وانقر على </p>"
+				"text" : "<h5>لكي تحصل على عرض أسعار، رجاء مشاهدة الفيديو الذي به الإرشادات.</h5><p>'Get a quote' بعد مشاهدة الفيديو، اذهب إلى أسفل وانقر على </p>"
+			},"youtube":{
+				"src": "https://youtube.com/embed/erbo6fLdmtw"
 			},
 			"bottom":{
-				"text" : "<p dir='rtl'>إذا وضعت ثقتك في Accent Translations لترجمة أي أوراق تحتاجها، هذا يعني أنك تضع ترجمتك بين أيدي أمينة. نحن نعلم ما ه احتياجاتك وما الذي تتوقعه منا. نحن نضمن لك الجودة العالية والخدمة السريعة من خلال إدارة المشروعات بدقة شديدة بالإضافة إلى خبرة ومهنية مترجمينا. كل هذا يساعدك على تقديم طلب ناجح.</p><p dir='rtl'>واستعد للمجيء إلى كندا! Accent Translations اختر</p>"
+				"text" : "<p dir='rtl' lang='ar'>إذا وضعت ثقتك في Accent Translations لترجمة أي أوراق تحتاجها، هذا يعني أنك تضع ترجمتك بين أيدي أمينة. نحن نعلم ما هي احتياجاتك وما الذي تتوقعه منا. نحن نضمن لك الجودة العالية والخدمة السريعة من خلال إدارة المشروعات بدقة شديدة بالإضافة إلى خبرة ومهنية مترجمينا. كل هذا يساعدك على تقديم طلب ناجح.</p><p dir='rtl' lang='ar'>اختر Accent Translations  واستعد للمجيء إلى كندا!</p>"
+
+
+
+
 			}
 		}
 	}

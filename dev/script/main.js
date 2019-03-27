@@ -143,7 +143,8 @@ app.inView = () => {
 app.languageSelector = () => {
 	
 	const languagesBtn = [].slice.call(document.querySelectorAll('#languages li .btn'));
-
+	const title = document.querySelector('#languageSelector > .container > h3');
+	
 
 	const fetching = (languageSelect) => {
 		fetch(`./public/js/languageText.json`)
@@ -159,6 +160,7 @@ app.languageSelector = () => {
 	languagesBtn.forEach((language) => {
 		const flag = language.querySelector('img');
 		flag.setAttribute("src", `./assets/svg/flag/${language.innerText.toLowerCase()}.svg`);
+		
 
 		language.addEventListener('click', (e) => {
 			let languageName = language.textContent.toLowerCase();
@@ -169,6 +171,12 @@ app.languageSelector = () => {
 			language.classList.add('active');
 
 			fetching(languageName);
+			console.log(languageName)
+			if (languageName === 'english'){
+				title.classList.add('active');
+			} else {
+				title.classList.remove('active');
+			}
 		});
 	})
 
@@ -191,13 +199,13 @@ app.languageSelector = () => {
 
 			<div id="video"> 
 				<div class="vidcon">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/pOmu0LtcI6Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="${res.whyus.youtube.src}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 			</div>
 			
 			${res.whyus.bottom.text}
 
-			<a href="https://goo.gl/forms/quc15jksGYEkYEjB3" target="_blank"><button class="btn btnDark">Get a Quote</button></a>
+			<a href="https://goo.gl/forms/hHhQUBiBRpvqlrf73" target="_blank"><button class="btn btnDark">Get a Quote</button></a>
 		</div>`
 	}
 
@@ -212,14 +220,11 @@ app.hoverLetter = () => {
 	const theWord = document.getElementById('the_word');
 	
 	let currentLetter = 0;
-	console.log("set on the page");
 	
 	setInterval( function() {
 		theWord.innerText = letters[currentLetter].getAttribute('data-name');
-		console.log("interval start");
 		letters.forEach( (letter) => {
 			letter.classList.remove("opacity");
-			console.log("each letter run");
 		})
 		letters[currentLetter].classList.add("opacity")
 		currentLetter = (currentLetter+1)%letters.length;
@@ -228,17 +233,17 @@ app.hoverLetter = () => {
 }
 
 app.init = () => {
-	// if(window.location.pathname == "./"){ 
+	if(window.location.pathname == "/"){ 
 		app.testimonials();
 		app.inView();
-	// }
-	// if(window.location.pathname == "./imm-applicants.html"){ 
+	}
+	if(window.location.pathname == "/imm-applicants.html" || window.location.pathname == "/"){ 
 		app.languageSelector();
-	// }
+	}
 	app.events();
-	// if(window.location.pathname == "./why-us.html"){ 
+	if(window.location.pathname == "/why-us.html"){ 
 		app.hoverLetter();
-	// }
+	}
 }
 
 app.init();
