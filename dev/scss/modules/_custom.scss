@@ -4,6 +4,11 @@
 	width: 100%;
 }
 
+.dividerRed{
+	@extend .dividerWhite;
+	background-color: $brand1;
+}
+
 .span2{
 	display: grid;
 	

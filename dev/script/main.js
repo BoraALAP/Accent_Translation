@@ -71,16 +71,16 @@ app.testimonials = () => {
 app.counters = () => {
 	const numbers = [].slice.call(document.querySelectorAll('.counterNum'));
 	const comma = document.querySelector(".counterNum[data-type='comma']");
-	
+
 	numbers.forEach((item) => {
 		let max = item.dataset.to;
-		let min = 0; 
+		let min = 0;
 		let timing;
 
-		if (max > 3000){
+		if (max > 3000) {
 			timing = item.dataset.to / 1200;
-		} else if (item.hasAttribute('data-type')) {	
-			max = item.dataset.to/10;		
+		} else if (item.hasAttribute('data-type')) {
+			max = item.dataset.to / 10;
 			timing = item.dataset.to / 10;
 		} else {
 			max = item.dataset.to;
@@ -91,7 +91,7 @@ app.counters = () => {
 			if (min < max) {
 				min = min + (max / 1000);
 			}
-			if (item.hasAttribute('data-type')){
+			if (item.hasAttribute('data-type')) {
 				item.innerText = min.toFixed(1);
 			} else {
 				item.innerText = Math.round(min);
@@ -141,10 +141,10 @@ app.inView = () => {
 }
 
 app.languageSelector = () => {
-	
+
 	const languagesBtn = [].slice.call(document.querySelectorAll('#languages li .btn'));
 	const title = document.querySelector('#languageSelector > .container > h3');
-	
+
 
 	const fetching = (languageSelect) => {
 		fetch(`./public/js/languageText.json`)
@@ -160,7 +160,7 @@ app.languageSelector = () => {
 	languagesBtn.forEach((language) => {
 		const flag = language.querySelector('img');
 		flag.setAttribute("src", `./assets/svg/flag/${language.innerText.toLowerCase()}.svg`);
-		
+
 
 		language.addEventListener('click', (e) => {
 			let languageName = language.textContent.toLowerCase();
@@ -172,7 +172,7 @@ app.languageSelector = () => {
 
 			fetching(languageName);
 			console.log(languageName)
-			if (languageName === 'english'){
+			if (languageName === 'english') {
 				title.classList.add('active');
 			} else {
 				title.classList.remove('active');
@@ -218,30 +218,30 @@ app.languageSelector = () => {
 app.hoverLetter = () => {
 	const letters = document.querySelectorAll('#letters>h3');
 	const theWord = document.getElementById('the_word');
-	
+
 	let currentLetter = 0;
-	
-	setInterval( function() {
+
+	setInterval(function () {
 		theWord.innerText = letters[currentLetter].getAttribute('data-name');
-		letters.forEach( (letter) => {
+		letters.forEach((letter) => {
 			letter.classList.remove("opacity");
 		})
 		letters[currentLetter].classList.add("opacity")
-		currentLetter = (currentLetter+1)%letters.length;
-		
-	},2500)
+		currentLetter = (currentLetter + 1) % letters.length;
+
+	}, 2500)
 }
 
 app.init = () => {
-	if(window.location.pathname == "/"){ 
+	if (document.querySelector('#testimonials')) {
 		app.testimonials();
 		app.inView();
 	}
-	if(window.location.pathname == "/imm-applicants.html" || window.location.pathname == "/"){ 
+	if (document.querySelector('#languageSelector')) {
 		app.languageSelector();
 	}
 	app.events();
-	if(window.location.pathname == "/why-us.html"){ 
+	if (document.querySelector('#why-us-main')) {
 		app.hoverLetter();
 	}
 }

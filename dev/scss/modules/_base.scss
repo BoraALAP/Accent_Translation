@@ -309,6 +309,12 @@ button {
 .btnDark {
     background-color: $brand1;
     padding: 15px 50px;
+    color:$white;
+}
+.btnLight {
+    background-color: $white;
+    padding: 15px 50px;
+    color:$brand1;
 }
 
 .btnSmall {

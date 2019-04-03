@@ -9,7 +9,8 @@ MODULES
 @import "modules/_fonts.scss"; // all fonts declaration
 @import "modules/_classes.scss"; // all resuable classes
 @import "modules/_base.scss"; // main structure of the site
-@import "modules/_mixins.scss"; // main structure of the site
+@import "modules/_mixins.scss"; // Mixins
+@import "modules/_form.scss"; // main structure of the form
 
 @import "sections/_header.scss"; // Site Header
 @import "sections/_footer.scss"; // Site Footer

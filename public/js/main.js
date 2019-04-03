@@ -269,15 +269,15 @@
 		};
 
 		app.init = () => {
-			if (window.location.pathname == "/") {
+			if (document.querySelector('#testimonials')) {
 				app.testimonials();
 				app.inView();
 			}
-			if (window.location.pathname == "/imm-applicants.html" || window.location.pathname == "/") {
+			if (document.querySelector('#languageSelector')) {
 				app.languageSelector();
 			}
 			app.events();
-			if (window.location.pathname == "/why-us.html") {
+			if (document.querySelector('#why-us-main')) {
 				app.hoverLetter();
 			}
 		};

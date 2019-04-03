@@ -1,13 +1,12 @@
-
 /**************************         
 IMPORT
-***************************/     
+***************************/
 @import "_imports.scss"; // media queries - if needed 
 
 
 /**************************
 TEMPLATES begin 
-***************************/   
+***************************/
 /*-----------------------------------------------------------------------------------
 
         ! ! !    R E A D   T H I S    ! ! !  
@@ -29,204 +28,238 @@ TEMPLATES begin
 1. GENERAL ELEMENTS
 ------------------------------------------------*/
 
-html{
-    // @include scrollbars(0.5em, $black);   
-} 
+html {
+	// @include scrollbars(0.5em, $black);   
+}
 
 /*---------------------------------------------- 
 2. HOME PAGE
 ------------------------------------------------*/
 
-#enterence{
-	
+#enterence {
+
 	background: url('../../assets/svg/enterenceBg.svg');
 	background-position: center right;
-    background-size: contain;
-    background-repeat: no-repeat;
-    
-	.container{
+	background-size: contain;
+	background-repeat: no-repeat;
+
+	.container {
 		text-align: center;
 		align-content: center;
-		grid-gap:$gutterw;
-		padding:($gutterh * 2) 0;
-		h2{
-			margin-bottom:32px;
+		grid-gap: $gutterw;
+		padding: ($gutterh * 2) 0;
+
+		h2 {
+			margin-bottom: 32px;
 		}
-		h6{
-			margin-bottom:24px;
+
+		h6 {
+			margin-bottom: 24px;
 			font-weight: $regular;
 		}
 
-		.text{
-		    align-content: center;
-		    display: grid;
-		    a{
-		    	justify-content: center;
-			    display: grid;
-			    button{
-			    	min-width: 256px;
-			    	display: grid;
-			    	
-			    }
+		.text {
+			align-content: center;
+			display: grid;
+
+			a {
+				justify-content: center;
+				display: grid;
+
+				button {
+					min-width: 256px;
+					display: grid;
+
+				}
 			}
 		}
-		.image{
+
+		.image {
 			justify-self: center;
 			display: none;
-			img{
-			    width: 30vw;
+
+			img {
+				width: 30vw;
 			}
 		}
-		@include MQ($M){
+
+		@include MQ($M) {
 			grid-template-columns: 3fr 2fr;
 			text-align: left;
-			.text{
-				a{
+
+			.text {
+				a {
 					justify-content: start;
 				}
 			}
-			.image{
+
+			.image {
 				display: grid;
 			}
 		}
 	}
-	@include MQ($M){
+
+	@include MQ($M) {
 		margin-top: 0px;
 	}
 }
 
-#profs{
+#profs {
 	display: grid;
 	justify-items: center;
-	margin-top:(-$gutterh * 1.5);
+	margin-top: (-$gutterh * 1.5);
 	background: url('../../assets/svg/areYouBg.svg') no-repeat top center;
-	background-size:cover;
-	padding-top:$gutterh * 3;
-	.container{
+	background-size: cover;
+	padding-top: $gutterh * 3;
+
+	.container {
 		justify-items: center;
 	}
-	#threeProf{
+
+	#threeProf {
 		display: grid;
 		grid-gap: $gutterh;
 		margin-bottom: $gutterh;
-		.boxButton{
+
+		.boxButton {
 			display: grid;
-			align-content:center;
-		    justify-items: center;
-		    text-align: center;
-		    background:$white;
-		    padding:$gutterh;
-		    border-radius: 8px;
-		   	
-		    min-height: 424px;
-		    @extend .btn;
-			img{
-			    height: 96px;
-			    margin-bottom: 32px;
-			}
-			h5{
-				margin-bottom: 8px;
-			}
-			p{
+			align-content: center;
+			justify-items: center;
+			text-align: center;
+			background: $white;
+			padding: $gutterh;
+			border-radius: 8px;
+
+			min-height: 424px;
+			@extend .btn;
+
+			img {
+				height: 96px;
 				margin-bottom: 32px;
 			}
-			@include MQ($M){
+
+			h5 {
+				margin-bottom: 8px;
+			}
+
+			p {
+				margin-bottom: 32px;
+			}
+
+			@include MQ($M) {
 				padding: $gutterw ($gutterw / 2);
 			}
 		}
-		@include MQ($M){
+
+		@include MQ($M) {
 			grid-template-columns: repeat(2, 1fr);
 			grid-gap: $gutterw / 2;
 		}
 	}
-	p{
+
+	p {
 		text-align: center;
 		margin: 1em;
 	}
 }
 
-#testimonials{
-	.container{
-	    justify-items: center;
-	    grid-gap:$gutterh/4;
-	    h3{
-	    	margin-bottom: 24px;
-	    }
-	    h6{
-	    	color:$brand2;
-	    	margin-bottom:48px;
-	    	text-align: center;
-	    }
-	    .testimonial{
-	    	text-align: center;
-	    	margin-bottom: 32px;
-    	    min-height: 135px;
-    	    transition: all 1s ease;
-	    	p{
-	    		margin-bottom: 24px;
-	    	}
-	    	.name{
-	    		font-weight: $extrabold;
-	    		color: $gray4;
-	    	}
-	    	&.transition{
-	    		opacity:0;
-	    	}
-	    }
-	    .testimonialArrows{
-    	    display: grid;
-		    grid-template-columns: repeat(3, 1fr);
-		    justify-self: end;
-		    grid-gap: 10px;
-		    justify-items: center;
-		    align-items: center;
-	    	button{
-	    		padding:8px 16px;
-	    		box-shadow: $box-shadow;
-	    		border-radius:0;
+#testimonials {
+	.container {
+		justify-items: center;
+		grid-gap: $gutterh/4;
 
-	    	}
-	    }
+		h3 {
+			margin-bottom: 24px;
+		}
+
+		h6 {
+			color: $brand2;
+			margin-bottom: 48px;
+			text-align: center;
+		}
+
+		.testimonial {
+			text-align: center;
+			margin-bottom: 32px;
+			min-height: 135px;
+			transition: all 1s ease;
+
+			p {
+				margin-bottom: 24px;
+			}
+
+			.name {
+				font-weight: $extrabold;
+				color: $gray4;
+			}
+
+			&.transition {
+				opacity: 0;
+			}
+		}
+
+		.testimonialArrows {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			justify-self: end;
+			grid-gap: 10px;
+			justify-items: center;
+			align-items: center;
+
+			button {
+				padding: 8px 16px;
+				box-shadow: $box-shadow;
+				border-radius: 0;
+
+			}
+		}
 	}
 }
 
-#counters{
+#counters {
 	display: grid;
 	justify-items: center;
 	background: url('../../assets/svg/counterBg.svg') no-repeat top center;
-	background-size:cover;
-	padding-top:$gutterh * 5;
-	h3{
-		color:white;
+	background-size: cover;
+	padding-top: $gutterh * 5;
+
+	h3 {
+		color: white;
 		text-transform: uppercase;
 		text-align: center;
 		margin-bottom: $gutterh;
 	}
-	#threeCounter{
+
+	#threeCounter {
 		display: grid;
 		grid-gap: $gutterw * 2.5;
-		.counterHome{
+
+		.counterHome {
 			display: grid;
-			align-content:center;
+			align-content: center;
 			justify-items: center;
 			text-align: center;
-			color:$white;
-			img{
+			color: $white;
+
+			img {
 				height: 90px;
 				margin-bottom: 32px;
 			}
-			h6{
+
+			h6 {
 				margin-bottom: 32px;
-				color:$white;
+				color: $white;
 				font-size: 1em;
-				font-weight:$bold;
+				font-weight: $bold;
 			}
-			.number{
+
+			.number {
 				font-size: 3em;
-				font-weight:$black;
+				font-weight: $black;
 			}
 		}
-		@include MQ($M){
+
+		@include MQ($M) {
 			grid-template-columns: repeat(3, 1fr);
 			grid-gap: $gutterw;
 		}
@@ -238,22 +271,24 @@ html{
 2. CONTACT PAGE
 ------------------------------------------------*/
 
-#contact{
-	.container{
-		#map{
-			height:60vh;
+#contact {
+	.container {
+		#map {
+			height: 60vh;
 			width: auto;
-			background:#000;
+			background: #000;
 		}
 
-		h5{
+		h5 {
 			margin-top: 32px;
 		}
-		p{
-			margin-top:8px;
+
+		p {
+			margin-top: 8px;
 		}
+
 		@include MQ($M) {
-			grid-template-columns:3fr 2fr;
+			grid-template-columns: 3fr 2fr;
 		}
 	}
 }
@@ -263,63 +298,74 @@ html{
 3. IMM-APPLICANTS PAGE
 ------------------------------------------------*/
 
-#languageSelector{
-	h3{
+#languageSelector {
+	h3 {
 		display: none;
 		justify-self: center;
-		&.active{
+
+		&.active {
 			display: grid;
 		}
 	}
-	#languages{
-		h5{
+
+	#languages {
+		h5 {
 			text-align: center;
-			margin-bottom:42px;
+			margin-bottom: 42px;
 		}
-		ul{
-			display:grid;
-			grid-template-columns: repeat( auto-fit, minmax(100px, auto) );	
+
+		ul {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(100px, auto));
 			// grid-auto-flow: column;
 			justify-content: center;
-			grid-gap:30px;
-			li{
-				display:grid;
+			grid-gap: 30px;
+
+			li {
+				display: grid;
 				align-items: center;
-				margin:0;
-				.btnSmall{
-					display:grid;
+				margin: 0;
+
+				.btnSmall {
+					display: grid;
 					grid-auto-flow: row;
-					grid-gap:5px;
+					grid-gap: 5px;
 					font-weight: $semibold;
 					padding: 10px;
-					span{
+
+					span {
 						margin-bottom: 8px;
 					}
-					&.active{
-						color:$white;
+
+					&.active {
+						color: $white;
 						background-color: $brand1;
-					}	
+					}
 				}
 			}
 		}
 	}
 }
 
-#applicants{
-	padding-top:0;
-	.container{
+#applicants {
+	padding-top: 0;
+
+	.container {
 		grid-gap: 0;
 		text-align: center;
 		justify-content: center;
-		#video{
+
+		#video {
 			margin-top: 3vh;
 			margin-bottom: 3vh;
 			max-width: 800px;
 		}
-		p{
+
+		p {
 			justify-self: center;
 		}
-		a{
+
+		a {
 			margin-top: 30px;
 		}
 	}
@@ -330,15 +376,17 @@ html{
 /*---------------------------------------------- 
 4. IMM-PROFESSIONALS PAGE
 ------------------------------------------------*/
-#immProff{
-	.container{
-		ul{
-			padding:0 2em ;
-			li{
+#immProff {
+	.container {
+		ul {
+			padding: 0 2em;
+
+			li {
 				list-style: inherit;
 			}
 		}
-		@include MQ($L){
+
+		@include MQ($L) {
 			grid-template-columns: 1fr 1fr;
 		}
 	}
@@ -349,19 +397,22 @@ html{
 5. WHO-WE-ARE
 ------------------------------------------------*/
 
-#who-we-are{
-	.container{
+#who-we-are {
+	.container {
 		grid-gap: $gutterh/2;
 		justify-items: center;
-		img{
+
+		img {
 			width: 100%;
 			display: grid;
 			max-width: 60vw;
 		}
-		p{
+
+		p {
 			margin-bottom: $gutterw / 4;
 		}
-		@include MQ($S){
+
+		@include MQ($S) {
 			grid-template-columns: 60% 40%;
 		}
 	}
@@ -370,99 +421,116 @@ html{
 /*---------------------------------------------- 
 6. Why Us
 ------------------------------------------------*/
-#why-us-main{
-	.container{
+#why-us-main {
+	.container {
 		display: grid;
 		justify-items: center;
-		.whiteContainer{
+
+		.whiteContainer {
 			padding: ($gutterh * 2) 0;
 			display: grid;
 			justify-self: center;
-	    width: 100%;
-			#whyus_list{
+			width: 100%;
+
+			#whyus_list {
 				display: grid;
 				grid-gap: $gutterh;
 				margin-top: $gutterh / 2;
-		    text-align: center;
-				div{
+				text-align: center;
+
+				div {
 					display: grid;
 					grid-gap: 20px;
-					align-content:start;
+					align-content: start;
 					justify-items: center;
-					.circle_shape{
-						background-color:rgba($brand1,0.05);
+
+					.circle_shape {
+						background-color: rgba($brand1, 0.05);
 						border-radius: 50%;
 					}
 				}
 			}
 		}
-		.middleContainer{
+
+		.middleContainer {
 			align-self: start;
 			max-width: 600px;
-			&.single{
+
+			&.single {
 				grid-column: auto;
 			}
 		}
-		#letters_desktop{
-			display:none;
-			#letters{
-		    grid-auto-flow: column;
-		    justify-content: space-around;
-		    display: grid;
-				h3{
-					color:$brand1;
+
+		#letters_desktop {
+			display: none;
+
+			#letters {
+				grid-auto-flow: column;
+				justify-content: space-around;
+				display: grid;
+
+				h3 {
+					color: $brand1;
 					opacity: 0.3;
 					transition: all 0.5s ease;
-					&.opacity{
+
+					&.opacity {
 						opacity: 1;
 					}
 				}
 			}
-			#the_word{
-				position:relative;
-				height:40px;
+
+			#the_word {
+				position: relative;
+				height: 40px;
 				display: grid;
 				justify-content: center;
-				align-content:end;
+				align-content: end;
 				transition: all 1s ease;
 			}
 
 
-			@include MQ($M){
+			@include MQ($M) {
 				display: grid;
 			}
 		}
-		#letters_mobile{
-			h6{
-		    display: grid;    
-		    grid-template-columns: max-content auto;
-		    align-items: center;
-		    margin: ($gutterh / 6) 0;
-		    grid-gap: $gutterh / 8;
-		    border-radius:$border-radius;
-		    width: fit-content;
-				.big_letter{
+
+		#letters_mobile {
+			h6 {
+				display: grid;
+				grid-template-columns: max-content auto;
+				align-items: center;
+				margin: ($gutterh / 6) 0;
+				grid-gap: $gutterh / 8;
+				border-radius: $border-radius;
+				width: fit-content;
+
+				.big_letter {
 					width: 40px;
 					height: 40px;
 					justify-content: center;
-			    display: grid;
-		      align-items: center;
-		      background-color: $brand2;
-		      border-radius:$border-radius;
-		      color:$white;
+					display: grid;
+					align-items: center;
+					background-color: $brand2;
+					border-radius: $border-radius;
+					color: $white;
 				}
 			}
-			@include MQ($M){
+
+			@include MQ($M) {
 				display: none;
 			}
 		}
-		@include MQ($M){
+
+		@include MQ($M) {
 			grid-template-columns: 1fr 1fr;
-			.whiteContainer{
+
+			.whiteContainer {
 				grid-column: span 2;
-				#whyus_list{
+
+				#whyus_list {
 					grid-column: span 2;
-					grid-template-columns: repeat(auto-fill, minmax(300px,auto));
+					grid-template-columns: repeat(auto-fill, minmax(300px, auto));
 				}
 			}
 		}
@@ -472,9 +540,9 @@ html{
 /*---------------------------------------------- 
 7. Refer Accent
 ------------------------------------------------*/
-#refer-accent{
-	.container{
-		.btnDark{
+#refer-accent {
+	.container {
+		.btnDark {
 			margin: ($gutterw / 2) 0;
 		}
 	}
@@ -482,15 +550,35 @@ html{
 
 
 
+/*---------------------------------------------- 
+8. Thank You
+------------------------------------------------*/
+#thankyou {
+	display: grid;
+	justify-content: center;
+	text-align: center;
 
+	.container {
+		width: 60vw;
+		justify-content: center;
 
+		.buttons {
+			display: grid;
+			grid-auto-flow: row;
+			grid-gap:40px;
+		}
 
+		img {
+			width: 80vw;
+		}
 
-
-
-
-
-
-
-
-
+		@include MQ($M) {
+			.buttons{
+				grid-auto-flow: column;
+			}
+			img {
+				width: 30vw;
+			}
+		}
+	}
+}

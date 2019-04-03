@@ -1,0 +1,120 @@
+.jotform-form{
+  display: grid;
+  justify-content: center;
+  
+  ul{
+    display: grid;
+    grid-gap: 30px;
+  }
+  #cid_1{
+    margin-bottom: 40px;
+    h2{
+      font-weight: $black;
+    }
+  }
+
+  input, text-area{
+    padding: 10px;
+    border-color: $gray3;
+    border-width: 1px;
+    border-style: solid;
+  }
+
+  .form-address-city, .form-address-state, .form-address-line{
+    width:100%;
+  }
+
+  .form-dropdown{
+    height: 40px;
+    background:transparent;
+    border-radius: 0;
+    border-color:$gray3;
+    box-shadow:none;
+  }
+  .qq-upload-button{
+    background: $brand1;
+    text-shadow:none;
+    border:none;
+    @extend .btn;
+    @extend .btnDark;
+  }
+
+  .qq-uploader{
+    width: 100%;
+  }
+  .qq-upload-list{
+    grid-gap: 5px;
+    li{
+      padding:10px;
+      display: grid;
+      font-size:1em;
+      background:#fbfbfb;
+      border-radius:0;
+      .qq-upload-delete{
+        display: grid;
+        background: #333;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        width: 40px;
+        border-radius: 0;
+      }
+    }
+  }
+
+  .form-input{
+    display: grid;
+  }
+  .form-label{
+    font-weight: $bold;
+  }
+  .form-sub-label-container, .form-line{
+    display: grid;
+    grid-auto-flow: row;
+    margin:0;
+  }
+  .form-sub-label-container{
+    @extend .form-sub-label-container;
+    margin-bottom:20px;
+    float: none;
+    
+  }
+
+  [data-type=control_fullname] .form-sub-label-container{
+    width: 100%;
+  }
+  .form-sub-label{
+    font-weight: $regular;
+    font-size: 0.7em
+  }
+  .form-required{
+    color:$brand1;
+  }
+
+
+  .form-single-column{
+    display: grid;
+    grid-gap: 20px;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    margin-top: 20px;
+  }
+
+  .form-upload-multiple{
+    margin: 20px 0;
+  }
+
+  .form-address-table{
+    width:100%;
+  }
+
+  .tableRow{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+
+
+}
